@@ -1,36 +1,44 @@
 {
    guistr: "# # String gsaved with Nlview 6.4.12  2014-12-16 bk=1.3272 VDI=35 GEI=35 GUI=JA:1.8
 #  -string -flagsOSRD
-preplace port AC_GPIO2 -pg 1 -y 40 -defaultsOSRD
-preplace port DDR -pg 1 -y 380 -defaultsOSRD
-preplace port AC_MCLK -pg 1 -y 80 -defaultsOSRD
-preplace port AC_GPIO3 -pg 1 -y 60 -defaultsOSRD
-preplace port AC_ADR0 -pg 1 -y 20 -defaultsOSRD
-preplace port AC_ADR1 -pg 1 -y 40 -defaultsOSRD
-preplace port AC_SCK -pg 1 -y 100 -defaultsOSRD
-preplace port AC_SDA -pg 1 -y 120 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y 400 -defaultsOSRD
-preplace port AC_GPIO0 -pg 1 -y 60 -defaultsOSRD
-preplace port AC_GPIO1 -pg 1 -y 20 -defaultsOSRD
-preplace inst zed_audio_0 -pg 1 -lvl 2 -y 130 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 2 -y 680 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 2 3 730 380 NJ 380 NJ
-preplace netloc zed_audio_0_AC_ADR0 1 2 3 710 20 NJ 20 NJ
-preplace netloc AC_GPIO2_1 1 0 2 NJ 40 180
-preplace netloc zed_audio_0_AC_ADR1 1 2 3 720 40 NJ 40 NJ
-preplace netloc zed_audio_0_AC_MCLK 1 2 3 740 80 NJ 80 NJ
-preplace netloc AC_GPIO1_1 1 0 2 NJ 20 190
-preplace netloc zed_audio_0_AC_GPIO0 1 2 3 730 60 NJ 60 NJ
-preplace netloc AC_GPIO3_1 1 0 2 NJ 60 170
-preplace netloc processing_system7_0_FIXED_IO 1 2 3 750 400 NJ 400 NJ
-preplace netloc hphone_l_valid_1 1 1 1 210
-preplace netloc Net 1 2 3 760 120 NJ 120 NJ
-preplace netloc zed_audio_0_AC_SCK 1 2 3 750 100 NJ 100 NJ
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 2 200 540 710
-levelinfo -pg 1 100 150 520 920 1240 1290
+preplace port AC_GPIO2 -pg 1 -y 580 -defaultsOSRD
+preplace port DDR -pg 1 -y 920 -defaultsOSRD
+preplace port AC_MCLK -pg 1 -y 620 -defaultsOSRD
+preplace port AC_GPIO3 -pg 1 -y 600 -defaultsOSRD
+preplace port AC_ADR0 -pg 1 -y 560 -defaultsOSRD
+preplace port AC_ADR1 -pg 1 -y 580 -defaultsOSRD
+preplace port AC_SCK -pg 1 -y 640 -defaultsOSRD
+preplace port AC_SDA -pg 1 -y 660 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 940 -defaultsOSRD
+preplace port AC_GPIO0 -pg 1 -y 600 -defaultsOSRD
+preplace port AC_GPIO1 -pg 1 -y 560 -defaultsOSRD
+preplace inst rst_processing_system7_0_100M -pg 1 -lvl 3 -y 240 -defaultsOSRD
+preplace inst audio_to_axi_0 -pg 1 -lvl 1 -y 80 -defaultsOSRD
+preplace inst processing_system7_0_axi_periph -pg 1 -lvl 4 -y 280 -defaultsOSRD
+preplace inst zed_audio_0 -pg 1 -lvl 2 -y 670 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -y 1220 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 2 5 NJ 1150 NJ 1150 NJ 1150 NJ 1150 1740
+preplace netloc zed_audio_0_AC_ADR0 1 2 5 960 560 NJ 560 NJ 560 NJ 560 NJ
+preplace netloc AC_GPIO2_1 1 0 2 130 640 NJ
+preplace netloc zed_audio_0_AC_ADR1 1 2 5 970 580 NJ 580 NJ 580 NJ 580 NJ
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 0 5 160 10 NJ 10 NJ 10 NJ 10 1650
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 2 NJ 1210 1350
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 2 1 1000
+preplace netloc zed_audio_0_AC_MCLK 1 2 5 1010 620 NJ 620 NJ 620 NJ 620 NJ
+preplace netloc AC_GPIO1_1 1 0 2 140 620 NJ
+preplace netloc zed_audio_0_AC_GPIO0 1 2 5 990 600 NJ 600 NJ 600 NJ 600 NJ
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 0 4 160 150 NJ 150 NJ 150 1360
+preplace netloc AC_GPIO3_1 1 0 2 120 660 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 2 5 NJ 1170 NJ 1170 NJ 1170 NJ 1170 1750
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 3 1 N
+preplace netloc hphone_l_valid_1 1 1 1 350
+preplace netloc Net 1 2 5 1030 660 NJ 660 NJ 660 NJ 660 NJ
+preplace netloc zed_audio_0_AC_SCK 1 2 5 1020 640 NJ 640 NJ 640 NJ 640 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 150 600 340 810 980 1220 1370
+levelinfo -pg 1 100 250 770 1190 1510 1670 1720 1770
 ",
 }
 {
-   da_axi4_cnt: "1",
+   da_axi4_cnt: "2",
    da_ps7_cnt: "1",
 }
