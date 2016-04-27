@@ -1,0 +1,68 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
+| Date         : Wed Apr 20 14:08:55 2016
+| Host         : fx9.pld.ttu.ee running 64-bit openSUSE Leap 42.1 (x86_64)
+| Command      : report_control_sets -verbose -file audio_mixer_wrapper_control_sets_placed.rpt
+| Design       : audio_mixer_wrapper
+| Device       : xc7z020
+------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    15 |
+| Minimum Number of register sites lost to control set restrictions |    35 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              68 |           20 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             238 |           83 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              27 |           10 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------------------------+------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+----------------+
+|                    Clock Signal                    |                                             Enable Signal                                            |                                        Set/Reset Signal                                       | Slice Load Count | Bel Load Count |
++----------------------------------------------------+------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+----------------+
+|  audio_mixer_i/zed_audio_0/U0/i_clocking/CLK_48    | audio_mixer_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/state[3]_i_1_n_0             |                                                                                               |                1 |              4 |
+|  audio_mixer_i/zed_audio_0/U0/i_clocking/CLK_48    | audio_mixer_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/i2c_bits_left[3]_i_1_n_0     |                                                                                               |                3 |              4 |
+|  audio_mixer_i/zed_audio_0/U0/i_clocking/CLK_48    | audio_mixer_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/bitcount[6]_i_1_n_0          |                                                                                               |                3 |              4 |
+|  audio_mixer_i/zed_audio_0/U0/i_clocking/CLK_48    | audio_mixer_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/bitcount[6]_i_1_n_0          | audio_mixer_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/bitcount[7]_i_1_n_0   |                2 |              4 |
+|  audio_mixer_i/zed_audio_0/U0/i_clocking/CLK_48    | audio_mixer_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/pcnext[2]_i_1_n_0            |                                                                                               |                5 |              6 |
+|  audio_mixer_i/zed_audio_0/U0/i_clocking/CLK_48    | audio_mixer_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/i2c_data[8]_i_1_n_0          |                                                                                               |                5 |              8 |
+|  audio_mixer_i/zed_audio_0/U0/i_clocking/CLK_48    | audio_mixer_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/i2s_d_out_i_1_n_0       | audio_mixer_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_out_r_i_1_n_0 |                2 |              9 |
+|  audio_mixer_i/zed_audio_0/U0/i_clocking/CLK_48    | audio_mixer_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/pcnext[2]_i_1_n_0            | audio_mixer_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/state_reg_n_0_[3]     |                6 |             14 |
+|  audio_mixer_i/zed_audio_0/U0/i_clocking/CLK_48    | audio_mixer_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2c/Inst_i3c2/delay[15]_i_1_n_0            |                                                                                               |                4 |             16 |
+|  audio_mixer_i/zed_audio_0/U0/i_clocking/CLK_48    |                                                                                                      |                                                                                               |               11 |             18 |
+|  audio_mixer_i/processing_system7_0/inst/FCLK_CLK0 | audio_mixer_i/zed_audio_0/U0/new_sample_100                                                          |                                                                                               |               16 |             48 |
+|  audio_mixer_i/zed_audio_0/U0/i_clocking/CLK_48    | audio_mixer_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/audio_l_out[23]_i_1_n_0 |                                                                                               |               19 |             48 |
+|  audio_mixer_i/processing_system7_0/inst/FCLK_CLK0 |                                                                                                      |                                                                                               |               11 |             52 |
+|  audio_mixer_i/zed_audio_0/U0/i_clocking/CLK_48    | audio_mixer_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/sr_in[126]_i_1_n_0      |                                                                                               |               12 |             52 |
+|  audio_mixer_i/zed_audio_0/U0/i_clocking/CLK_48    | audio_mixer_i/zed_audio_0/U0/Inst_adau1761_izedboard/Inst_i2s_data_interface/i2s_d_out_i_1_n_0       |                                                                                               |               18 |             54 |
++----------------------------------------------------+------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+----------------+
+
+

@@ -1,0 +1,36 @@
+{
+   guistr: "# # String gsaved with Nlview 6.4.12  2014-12-16 bk=1.3272 VDI=35 GEI=35 GUI=JA:1.8
+#  -string -flagsOSRD
+preplace port AC_GPIO2 -pg 1 -y 40 -defaultsOSRD
+preplace port DDR -pg 1 -y 380 -defaultsOSRD
+preplace port AC_MCLK -pg 1 -y 80 -defaultsOSRD
+preplace port AC_GPIO3 -pg 1 -y 60 -defaultsOSRD
+preplace port AC_ADR0 -pg 1 -y 20 -defaultsOSRD
+preplace port AC_ADR1 -pg 1 -y 40 -defaultsOSRD
+preplace port AC_SCK -pg 1 -y 100 -defaultsOSRD
+preplace port AC_SDA -pg 1 -y 120 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 400 -defaultsOSRD
+preplace port AC_GPIO0 -pg 1 -y 60 -defaultsOSRD
+preplace port AC_GPIO1 -pg 1 -y 20 -defaultsOSRD
+preplace inst zed_audio_0 -pg 1 -lvl 2 -y 130 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -y 680 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 2 3 730 380 NJ 380 NJ
+preplace netloc zed_audio_0_AC_ADR0 1 2 3 710 20 NJ 20 NJ
+preplace netloc AC_GPIO2_1 1 0 2 NJ 40 180
+preplace netloc zed_audio_0_AC_ADR1 1 2 3 720 40 NJ 40 NJ
+preplace netloc zed_audio_0_AC_MCLK 1 2 3 740 80 NJ 80 NJ
+preplace netloc AC_GPIO1_1 1 0 2 NJ 20 190
+preplace netloc zed_audio_0_AC_GPIO0 1 2 3 730 60 NJ 60 NJ
+preplace netloc AC_GPIO3_1 1 0 2 NJ 60 170
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 750 400 NJ 400 NJ
+preplace netloc hphone_l_valid_1 1 1 1 210
+preplace netloc Net 1 2 3 760 120 NJ 120 NJ
+preplace netloc zed_audio_0_AC_SCK 1 2 3 750 100 NJ 100 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 2 200 540 710
+levelinfo -pg 1 100 150 520 920 1240 1290
+",
+}
+{
+   da_axi4_cnt: "1",
+   da_ps7_cnt: "1",
+}

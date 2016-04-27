@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Wed Apr 20 13:50:42 2016
+# Process ID: 25592
+# Log file: /home/INTRA/rauno.padari/workspace/audio-mixer/vivado/webtalk.log
+# Journal file: /home/INTRA/rauno.padari/workspace/audio-mixer/vivado/webtalk.jou
+#-----------------------------------------------------------
+source /home/INTRA/rauno.padari/workspace/audio-mixer/vivado/.Xil/Vivado-25264-fx9.pld.ttu.ee/webtalk/labtool_webtalk.tcl -notrace
