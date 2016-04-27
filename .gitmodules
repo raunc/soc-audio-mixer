@@ -1,0 +1,3 @@
+[submodule "ip_repo/zedboard_audio"]
+	path = ip_repo/zedboard_audio
+	url = https://github.com/raunc/zedboard_audio
