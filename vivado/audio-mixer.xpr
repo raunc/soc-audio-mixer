@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="/home/INTRA/rauno.padari/workspace/audio-mixer/vivado/audio-mixer.xpr">
+<Project Version="7" Minor="5" Path="/home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/audio-mixer.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="6ff6c957345446a2995adeb94b75be71"/>
@@ -13,6 +13,7 @@
     <Option Name="BoardPart" Val="em.avnet.com:zed:part0:1.3"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/axi_to_audio/axi_to_audio_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/audio_to_axi/audio_to_axi_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/zedboard_audio"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
@@ -27,13 +28,20 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="hdl/audio_mixer.hwdef"/>
-        <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="hw_handoff/audio_mixer_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="hdl/audio_mixer.vhd"/>
+        <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="ip/audio_mixer_xlconstant_0_0/audio_mixer_xlconstant_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="ip/audio_mixer_processing_system7_0_0/audio_mixer_processing_system7_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="ip/audio_mixer_zed_audio_0_0/audio_mixer_zed_audio_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="ip/audio_mixer_processing_system7_0_axi_periph_0/audio_mixer_processing_system7_0_axi_periph_0.xci"/>
+        <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="ip/audio_mixer_rst_processing_system7_0_100M_0/audio_mixer_rst_processing_system7_0_100M_0.xci"/>
+        <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="ip/audio_mixer_xbar_0/audio_mixer_xbar_0.xci"/>
+        <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="ip/audio_mixer_audio_to_axi_0_2/audio_mixer_audio_to_axi_0_2.xci"/>
+        <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="hdl/audio_mixer.vhd"/>
+        <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="ip/audio_mixer_auto_pc_0/audio_mixer_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="hdl/audio_mixer.hwdef"/>
+        <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="ip/audio_mixer_axi_to_audio_0_0/audio_mixer_axi_to_audio_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="hw_handoff/audio_mixer.hwh"/>
         <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="audio_mixer_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="ip/audio_mixer_zed_audio_0_0/audio_mixer_zed_audio_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="audio_mixer.bd" FileRelPathName="hw_handoff/audio_mixer_bd.tcl"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/audio_mixer/hdl/audio_mixer_wrapper.vhd">
         <FileInfo>
@@ -41,6 +49,8 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/bd/audio_mixer/ip/audio_mixer_audio_to_axi_0_2/audio_mixer_audio_to_axi_0_2.upgrade_log"/>
+      <File Path="$PSRCDIR/sources_1/bd/audio_mixer/ip/audio_mixer_axi_to_audio_0_0/audio_mixer_axi_to_audio_0_0.upgrade_log"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="audio_mixer_wrapper"/>

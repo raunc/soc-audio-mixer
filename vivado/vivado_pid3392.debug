@@ -1,0 +1,48 @@
+#-------------------------------------------------------------------------------
+# Vivado v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
+# Current time: 4/28/16 1:11:16 PM EEST
+# Process ID: 3392
+# Platform: Unix
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx
+# Technical Support with this file and a testcase attached.
+#-------------------------------------------------------------------------------
+4/28/16 1:11:16 PM EEST
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at ui.views.I.t.g(SourceFile:512)
+	at ui.views.I.t.a(SourceFile:68)
+	at ui.views.I.u.valueChanged(SourceFile:155)
+	at javax.swing.JTree.fireValueChanged(JTree.java:2926)
+	at javax.swing.JTree$TreeSelectionRedirector.valueChanged(JTree.java:3387)
+	at javax.swing.tree.DefaultTreeSelectionModel.fireValueChanged(DefaultTreeSelectionModel.java:635)
+	at javax.swing.tree.DefaultTreeSelectionModel.notifyPathChange(DefaultTreeSelectionModel.java:1093)
+	at javax.swing.tree.DefaultTreeSelectionModel.setSelectionPaths(DefaultTreeSelectionModel.java:294)
+	at javax.swing.tree.DefaultTreeSelectionModel.setSelectionPath(DefaultTreeSelectionModel.java:188)
+	at ui.views.I.t.cw(SourceFile:229)
+	at ui.b.b.ag.cog(SourceFile:77)
+	at ui.b.b.ag.coe(SourceFile:41)
+	at ui.views.I.t.<init>(SourceFile:127)
+	at ui.views.I.fY.b(SourceFile:570)
+	at ui.b.b.cp.v(SourceFile:633)
+	at ui.b.b.cD.finished(SourceFile:732)
+	at ui.frmwork.q.run(SourceFile:183)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:744)
+	at java.awt.EventQueue.access$400(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:697)
+	at java.awt.EventQueue$3.run(EventQueue.java:691)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:714)
+	at ui.frmwork.a.e.dispatchEvent(SourceFile:75)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+

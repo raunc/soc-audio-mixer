@@ -10,20 +10,29 @@ create_project -in_memory -part xc7z020clg484-1
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/INTRA/rauno.padari/workspace/audio-mixer/vivado/audio-mixer.cache/wt [current_project]
-set_property parent.project_path /home/INTRA/rauno.padari/workspace/audio-mixer/vivado/audio-mixer.xpr [current_project]
+set_property webtalk.parent_dir /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/audio-mixer.cache/wt [current_project]
+set_property parent.project_path /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/audio-mixer.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
-set_property ip_repo_paths /home/INTRA/rauno.padari/workspace/audio-mixer/ip_repo/zedboard_audio [current_project]
-add_files /home/INTRA/rauno.padari/workspace/audio-mixer/vivado/audio-mixer.srcs/sources_1/bd/audio_mixer/audio_mixer.bd
-set_property used_in_implementation false [get_files -all /home/INTRA/rauno.padari/workspace/audio-mixer/vivado/audio-mixer.srcs/sources_1/bd/audio_mixer/ip/audio_mixer_processing_system7_0_0/audio_mixer_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/INTRA/rauno.padari/workspace/audio-mixer/vivado/audio-mixer.srcs/sources_1/bd/audio_mixer/audio_mixer_ooc.xdc]
-set_property is_locked true [get_files /home/INTRA/rauno.padari/workspace/audio-mixer/vivado/audio-mixer.srcs/sources_1/bd/audio_mixer/audio_mixer.bd]
+set_property ip_repo_paths {
+  /home/INTRA/rauno.padari/workspace/soc-audio-mixer/ip_repo/axi_to_audio/axi_to_audio_1.0
+  /home/INTRA/rauno.padari/workspace/soc-audio-mixer/ip_repo/audio_to_axi/audio_to_axi_1.0
+  /home/INTRA/rauno.padari/workspace/soc-audio-mixer/ip_repo/zedboard_audio
+} [current_project]
+add_files /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/audio-mixer.srcs/sources_1/bd/audio_mixer/audio_mixer.bd
+set_property used_in_implementation false [get_files -all /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/audio-mixer.srcs/sources_1/bd/audio_mixer/ip/audio_mixer_processing_system7_0_0/audio_mixer_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/audio-mixer.srcs/sources_1/bd/audio_mixer/ip/audio_mixer_rst_processing_system7_0_100M_0/audio_mixer_rst_processing_system7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/audio-mixer.srcs/sources_1/bd/audio_mixer/ip/audio_mixer_rst_processing_system7_0_100M_0/audio_mixer_rst_processing_system7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/audio-mixer.srcs/sources_1/bd/audio_mixer/ip/audio_mixer_rst_processing_system7_0_100M_0/audio_mixer_rst_processing_system7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/audio-mixer.srcs/sources_1/bd/audio_mixer/ip/audio_mixer_xbar_0/audio_mixer_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/audio-mixer.srcs/sources_1/bd/audio_mixer/ip/audio_mixer_auto_pc_0/audio_mixer_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/audio-mixer.srcs/sources_1/bd/audio_mixer/audio_mixer_ooc.xdc]
+set_property is_locked true [get_files /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/audio-mixer.srcs/sources_1/bd/audio_mixer/audio_mixer.bd]
 
-read_vhdl -library xil_defaultlib /home/INTRA/rauno.padari/workspace/audio-mixer/vivado/audio-mixer.srcs/sources_1/bd/audio_mixer/hdl/audio_mixer_wrapper.vhd
-read_xdc /home/INTRA/rauno.padari/workspace/audio-mixer/ip_repo/zedboard_audio/constraints/zed_audio.xdc
-set_property used_in_implementation false [get_files /home/INTRA/rauno.padari/workspace/audio-mixer/ip_repo/zedboard_audio/constraints/zed_audio.xdc]
+read_vhdl -library xil_defaultlib /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/audio-mixer.srcs/sources_1/bd/audio_mixer/hdl/audio_mixer_wrapper.vhd
+read_xdc /home/INTRA/rauno.padari/workspace/soc-audio-mixer/ip_repo/zedboard_audio/constraints/zed_audio.xdc
+set_property used_in_implementation false [get_files /home/INTRA/rauno.padari/workspace/soc-audio-mixer/ip_repo/zedboard_audio/constraints/zed_audio.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

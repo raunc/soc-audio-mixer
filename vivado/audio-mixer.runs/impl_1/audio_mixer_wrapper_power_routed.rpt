@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
-| Date             : Wed Apr 20 14:09:18 2016
-| Host             : fx9.pld.ttu.ee running 64-bit openSUSE Leap 42.1 (x86_64)
+| Date             : Thu Apr 28 13:27:21 2016
+| Host             : fx8.pld.ttu.ee running 64-bit openSUSE Leap 42.1 (x86_64)
 | Command          : report_power -file audio_mixer_wrapper_power_routed.rpt -pb audio_mixer_wrapper_power_summary_routed.pb
 | Design           : audio_mixer_wrapper
 | Device           : xc7z020clg484-1
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 1.816 |
-| Dynamic (W)              | 1.656 |
-| Device Static (W)        | 0.160 |
+| Total On-Chip Power (W)  | 1.824 |
+| Dynamic (W)              | 1.664 |
+| Device Static (W)        | 0.161 |
 | Effective TJA (C/W)      | 11.5  |
-| Max Ambient (C)          | 64.1  |
-| Junction Temperature (C) | 45.9  |
+| Max Ambient (C)          | 64.0  |
+| Junction Temperature (C) | 46.0  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -49,20 +49,20 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.002 |        5 |       --- |             --- |
-| Slice Logic             |    <0.001 |      739 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |      213 |     53200 |            0.40 |
-|   CARRY4                |    <0.001 |        4 |     13300 |            0.03 |
-|   Register              |    <0.001 |      333 |    106400 |            0.31 |
-|   LUT as Shift Register |    <0.001 |        8 |     17400 |            0.05 |
-|   Others                |     0.000 |      153 |       --- |             --- |
-| Signals                 |    <0.001 |      495 |       --- |             --- |
+| Clocks                  |     0.007 |        5 |       --- |             --- |
+| Slice Logic             |     0.002 |     2834 |       --- |             --- |
+|   LUT as Logic          |     0.002 |     1135 |     53200 |            2.13 |
+|   Register              |    <0.001 |     1201 |    106400 |            1.13 |
+|   CARRY4                |    <0.001 |       16 |     13300 |            0.12 |
+|   LUT as Shift Register |    <0.001 |       67 |     17400 |            0.39 |
+|   Others                |     0.000 |      218 |       --- |             --- |
+| Signals                 |     0.002 |     1845 |       --- |             --- |
 | Block RAM               |    <0.001 |      0.5 |       140 |            0.36 |
 | MMCM                    |     0.121 |        1 |         4 |           25.00 |
 | I/O                     |     0.003 |        9 |       200 |            4.50 |
 | PS7                     |     1.529 |        1 |       --- |             --- |
-| Static Power            |     0.160 |          |           |                 |
-| Total                   |     1.816 |          |           |                 |
+| Static Power            |     0.161 |          |           |                 |
+| Total                   |     1.824 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.019 |       0.003 |      0.016 |
+| Vccint    |       1.000 |     0.027 |       0.011 |      0.016 |
 | Vccaux    |       1.800 |     0.088 |       0.067 |      0.021 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -147,24 +147,69 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+----------------------------------------------+-----------+
-| Name                                         | Power (W) |
-+----------------------------------------------+-----------+
-| audio_mixer_wrapper                          |     1.656 |
-|   audio_mixer_i                              |     1.653 |
-|     processing_system7_0                     |     1.529 |
-|       inst                                   |     1.529 |
-|     xlconstant_0                             |     0.000 |
-|     zed_audio_0                              |     0.124 |
-|       U0                                     |     0.124 |
-|         Inst_adau1761_izedboard              |     0.002 |
-|           Inst_i2c                           |    <0.001 |
-|             Inst_adau1761_configuraiton_data |    <0.001 |
-|             Inst_i3c2                        |    <0.001 |
-|           Inst_i2s_data_interface            |    <0.001 |
-|           i_ADAU1761_interface               |    <0.001 |
-|           i_i2s_sda_obuf                     |     0.000 |
-|         i_clocking                           |     0.121 |
-+----------------------------------------------+-----------+
++--------------------------------------------------+-----------+
+| Name                                             | Power (W) |
++--------------------------------------------------+-----------+
+| audio_mixer_wrapper                              |     1.664 |
+|   audio_mixer_i                                  |     1.661 |
+|     audio_to_axi_0                               |     0.002 |
+|       U0                                         |     0.002 |
+|         audio_to_axi_v1_0_S00_AXI_inst           |     0.002 |
+|     axi_to_audio_0                               |    <0.001 |
+|       U0                                         |    <0.001 |
+|         axi_to_audio_v1_0_S00_AXI_inst           |    <0.001 |
+|     processing_system7_0                         |     1.530 |
+|       inst                                       |     1.530 |
+|     processing_system7_0_axi_periph              |     0.006 |
+|       s00_couplers                               |     0.006 |
+|         auto_pc                                  |     0.006 |
+|           inst                                   |     0.006 |
+|             gen_axilite.gen_b2s_conv.axilite_b2s |     0.006 |
+|               RD.ar_channel_0                    |    <0.001 |
+|                 ar_cmd_fsm_0                     |    <0.001 |
+|                 cmd_translator_0                 |    <0.001 |
+|                   incr_cmd_0                     |    <0.001 |
+|                   wrap_cmd_0                     |    <0.001 |
+|               RD.r_channel_0                     |     0.002 |
+|                 rd_data_fifo_0                   |     0.001 |
+|                 transaction_fifo_0               |    <0.001 |
+|               SI_REG                             |     0.002 |
+|                 ar_pipe                          |    <0.001 |
+|                 aw_pipe                          |    <0.001 |
+|                 b_pipe                           |    <0.001 |
+|                 r_pipe                           |    <0.001 |
+|               WR.aw_channel_0                    |    <0.001 |
+|                 aw_cmd_fsm_0                     |    <0.001 |
+|                 cmd_translator_0                 |    <0.001 |
+|                   incr_cmd_0                     |    <0.001 |
+|                   wrap_cmd_0                     |    <0.001 |
+|               WR.b_channel_0                     |    <0.001 |
+|                 bid_fifo_0                       |    <0.001 |
+|                 bresp_fifo_0                     |    <0.001 |
+|       xbar                                       |    <0.001 |
+|         inst                                     |    <0.001 |
+|           gen_sasd.crossbar_sasd_0               |    <0.001 |
+|             addr_arbiter_inst                    |    <0.001 |
+|             gen_decerr.decerr_slave_inst         |    <0.001 |
+|             reg_slice_r                          |    <0.001 |
+|             splitter_ar                          |    <0.001 |
+|             splitter_aw                          |    <0.001 |
+|     rst_processing_system7_0_100M                |    <0.001 |
+|       U0                                         |    <0.001 |
+|         EXT_LPF                                  |    <0.001 |
+|           ACTIVE_LOW_EXT.ACT_LO_EXT              |    <0.001 |
+|         SEQ                                      |    <0.001 |
+|           SEQ_COUNTER                            |    <0.001 |
+|     zed_audio_0                                  |     0.122 |
+|       U0                                         |     0.122 |
+|         Inst_adau1761_izedboard                  |     0.001 |
+|           Inst_i2c                               |     0.001 |
+|             Inst_adau1761_configuraiton_data     |    <0.001 |
+|             Inst_i3c2                            |    <0.001 |
+|           Inst_i2s_data_interface                |    <0.001 |
+|           i_ADAU1761_interface                   |    <0.001 |
+|           i_i2s_sda_obuf                         |     0.000 |
+|         i_clocking                               |     0.121 |
++--------------------------------------------------+-----------+
 
 
