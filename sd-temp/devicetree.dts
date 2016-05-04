@@ -276,13 +276,13 @@
         };
 
        AXI_audio_in_0:  AXI_audio_in@43C00000 {
-            compatible = "soc,audio-in";
-		interrupts = < 0 29 1 >;
+            compatible = "generic-uio";
             reg = < 0x43C00000 0x10000 >;
+		interrupts = < 0 29 1 >;
+            interrupt-parent = <&ps7_scugic_0>;
        };
        AXI_audio_out_0:  AXI_audio_out@43C10000 {
-            compatible = "soc,audio-out";
-		interrupts = < 0 29 1 >;
+            compatible = "generic-uio";
             reg = < 0x43C10000 0x10000 >;
        };
 		
