@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+	[bootloader]/home/INTRA/raogbe/workspace/soc-audio-mixer/sd-temp/FSBL.elf
+	/home/INTRA/raogbe/workspace/soc-audio-mixer/sd-temp/audio_mixer_wrapper.bit
+	/home/INTRA/raogbe/workspace/soc-audio-mixer/sd-temp/u-boot.elf
+}

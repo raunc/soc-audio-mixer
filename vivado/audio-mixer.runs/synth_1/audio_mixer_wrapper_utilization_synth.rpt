@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
-| Date         : Thu Apr 28 13:26:22 2016
-| Host         : fx8.pld.ttu.ee running 64-bit openSUSE Leap 42.1 (x86_64)
+| Date         : Fri Apr 29 12:41:46 2016
+| Host         : fx9.pld.ttu.ee running 64-bit openSUSE Leap 42.1 (x86_64)
 | Command      : report_utilization -file audio_mixer_wrapper_utilization_synth.rpt -pb audio_mixer_wrapper_utilization_synth.pb
 | Design       : audio_mixer_wrapper
 | Device       : xc7z020

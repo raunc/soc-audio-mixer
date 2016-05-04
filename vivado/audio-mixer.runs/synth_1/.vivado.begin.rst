@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="INTRA\rauno.padari" Host="fx8.pld.ttu.ee" Pid="6313">
+    <Process Command="vivado" Owner="INTRA\raogbe" Host="fx9.pld.ttu.ee" Pid="22048">
     </Process>
 </ProcessHandle>
