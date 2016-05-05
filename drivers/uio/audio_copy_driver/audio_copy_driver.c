@@ -28,27 +28,38 @@ int main(int argc, char *argv[])
 {
     if (*argv[1] == 'p') {
         printf("::::START_USAGE::::\n");
-        printf("EXAMPLE : %s 2 4 \n", argv[0]);
+        printf("EXAMPLE : %s /dev/uio0 /dev/uio1 \n", argv[0]);
         printf("::::END_USAGE::::\n");
     }
     else {
+        printf("Starting audio_copy_driver");
   
         // Device files from command arguments
         char* audioInFile = argv[1];
-        char* audioOutFile = argv[2];
+//        char* audioOutFile = argv[2];
   
         // Open devices
+        printf("Opening in device");
         int audioInFd = open(audioInFile, O_RDWR);
         if (audioInFd < 1) { perror(argv[0]); return -1; }
- 
-        int audioOutFd = open(audioOutFile, O_RDWR);
+
+        // Audio out address
+        unsigned address = 0x43c10000;
+
+        printf("Opening /dev/mem");
+        int audioOutFd = open("/dev/mem", O_RDWR);
         if (audioOutFd < 1) { perror(argv[0]); return -1; }
+
+        printf("/dev/mem opened");
 
         //Redirect stdout/printf into /dev/kmsg file (so it will be printed using printk)
         freopen ("/dev/kmsg","w",stdout);
   
         //get architecture specific page size
         unsigned pageSize = sysconf(_SC_PAGESIZE);
+
+        unsigned offset = (address & (~(pageSize - 1)));
+        //unsigned registerOffset = address - offset;
   
         /*************************************************************************************************
          * TASK 1: Map the physical address to virtual address.                                          *
@@ -61,7 +72,7 @@ int main(int argc, char *argv[])
         printf("Mapping address\n");
         void *audioInPtr = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, audioInFd, 0);
 
-        void *audioOutPtr = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, audioOutFd, 0);
+        void *audioOutPtr = mmap(NULL, pageSize, PROT_READ | PROT_WRITE, MAP_SHARED, audioOutFd, offset);
 
         /************************************************************************************************
          * TASK 2: Enable interrupts                                                                    *

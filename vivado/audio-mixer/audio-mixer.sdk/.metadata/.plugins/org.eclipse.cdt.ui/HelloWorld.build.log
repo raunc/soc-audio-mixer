@@ -1,0 +1,21 @@
+12:31:48 **** Auto Build of configuration Debug for project HelloWorld ****
+make all 
+Building file: ../src/platform.c
+Invoking: ARM gcc compiler
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../HelloWorld_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: HelloWorld.elf
+Invoking: ARM gcc linker
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../HelloWorld_bsp/ps7_cortexa9_0/lib -o "HelloWorld.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: HelloWorld.elf
+ 
+Invoking: ARM Print Size
+arm-xilinx-eabi-size HelloWorld.elf  |tee "HelloWorld.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22812	   1152	  22564	  46528	   b5c0	HelloWorld.elf
+Finished building: HelloWorld.elf.size
+ 
+
+12:31:48 Build Finished (took 228ms)
+
