@@ -1,0 +1,73 @@
+14:15:20 INFO  : Processing command line option -hwspec /home/INTRA/rauno.padari/workspace/audio-mixer/vivado/audio-mixer.sdk/audio_mixer_wrapper.hdf.
+14:15:26 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2485
+14:15:27 INFO  : XSDB server has started successfully.
+14:15:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:15:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518038" && level==0} -index 1' command is executed.
+14:15:53 INFO  : FPGA configured successfully with bitstream "/home/INTRA/rauno.padari/workspace/audio-mixer/vivado/audio-mixer.sdk/audio_mixer_wrapper_hw_platform_0/audio_mixer_wrapper.bit"
+14:16:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:16:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518038" && level==0} -index 1' command is executed.
+14:16:29 INFO  : FPGA configured successfully with bitstream "/home/INTRA/rauno.padari/workspace/audio-mixer/vivado/audio-mixer.sdk/audio_mixer_wrapper_hw_platform_0/audio_mixer_wrapper.bit"
+14:18:22 INFO  : ps7_init is completed.
+14:18:22 INFO  : ps7_post_config is completed.
+14:18:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+14:20:21 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:31:37 INFO  : Processing command line option -hwspec /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/audio-mixer.sdk/audio_mixer_wrapper.hdf.
+12:31:38 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2485
+12:31:39 INFO  : XSDB server has started successfully.
+12:43:37 INFO  : Processing command line option -hwspec /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/audio-mixer.sdk/audio_mixer_wrapper.hdf.
+12:43:38 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2485
+12:43:39 INFO  : Checking for hwspec changes in the project audio_mixer_wrapper_hw_platform_1.
+12:43:39 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1461922982000,  Project:1461922245000
+12:43:39 INFO  : The hardware specification for project 'audio_mixer_wrapper_hw_platform_1' is different from /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/audio-mixer.sdk/audio_mixer_wrapper.hdf.
+12:43:39 INFO  : Copied contents of /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/audio-mixer.sdk/audio_mixer_wrapper.hdf into /audio_mixer_wrapper_hw_platform_1/system.hdf.
+12:43:39 INFO  : XSDB server has started successfully.
+12:47:58 INFO  : Processing command line option -hwspec /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/audio-mixer.sdk/audio_mixer_wrapper.hdf.
+12:47:59 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2492
+12:47:59 INFO  : Checking for hwspec changes in the project audio_mixer_wrapper_hw_platform_1.
+12:48:00 INFO  : XSDB server has started successfully.
+13:02:51 INFO  : Invoking Bootgen: bootgen -image output.bif -o /home/INTRA/raogbe/workspace/soc-audio-mixer/sd-image/BOOT.bin
+13:02:51 INFO  : Creating new bif file /home/INTRA/raogbe/workspace/soc-audio-mixer/sd-temp/output.bif
+13:02:51 INFO  : Bootgen command execution is done.
+15:32:38 INFO  : Processing command line option -hwspec /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado_new/vivado_new.sdk/audio_mixer_wrapper.hdf.
+15:32:39 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+15:32:41 INFO  : XSDB server has started successfully.
+15:32:46 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1462966530000,  Project:1461922982000
+15:32:46 INFO  : Project audio_mixer_wrapper_hw_platform_1's source hardware specification located at /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/audio-mixer.sdk/audio_mixer_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+15:32:56 INFO  : Project audio_mixer_wrapper_hw_platform_1's source hardware specification location will not be monitored anymore.
+15:47:35 INFO  : Processing command line option -hwspec /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado_new/vivado_new.sdk/audio_mixer_wrapper.hdf.
+15:47:36 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+15:47:37 INFO  : Checking for hwspec changes in the project audio_mixer_wrapper_hw_platform_2.
+15:47:37 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1462970781000,  Project:1462966530000
+15:47:37 INFO  : The hardware specification for project 'audio_mixer_wrapper_hw_platform_2' is different from /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado_new/vivado_new.sdk/audio_mixer_wrapper.hdf.
+15:47:37 INFO  : Copied contents of /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado_new/vivado_new.sdk/audio_mixer_wrapper.hdf into /audio_mixer_wrapper_hw_platform_2/system.hdf.
+15:47:37 INFO  : XSDB server has started successfully.
+15:47:43 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:47:45 INFO  : Clearing existing target manager status.
+15:47:48 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:49:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:49:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248570950" && level==0} -index 1' command is executed.
+15:49:20 INFO  : FPGA configured successfully with bitstream "/home/INTRA/raogbe/workspace/soc-audio-mixer/vivado_new/vivado_new.sdk/audio_mixer_wrapper_hw_platform_0/audio_mixer_wrapper.bit"
+15:58:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:58:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248570950" && level==0} -index 1' command is executed.
+15:58:25 INFO  : FPGA configured successfully with bitstream "/home/INTRA/raogbe/workspace/soc-audio-mixer/vivado_new/vivado_new.sdk/audio_mixer_wrapper_hw_platform_0/audio_mixer_wrapper.bit"
+15:58:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:58:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248570950" && level==0} -index 1' command is executed.
+15:59:02 INFO  : FPGA configured successfully with bitstream "/home/INTRA/raogbe/workspace/soc-audio-mixer/vivado_new/vivado_new.sdk/audio_mixer_wrapper_hw_platform_0/audio_mixer_wrapper.bit"
+15:59:09 INFO  : ps7_init is completed.
+15:59:09 INFO  : ps7_post_config is completed.
+15:59:09 INFO  : Processor reset is completed for ps7_cortexa9_0
+16:09:36 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1462972112000,  Project:1462970781000
+16:09:36 INFO  : Project audio_mixer_wrapper_hw_platform_2's source hardware specification located at /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado_new/vivado_new.sdk/audio_mixer_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+16:10:20 INFO  : Project audio_mixer_wrapper_hw_platform_2's source hardware specification location will not be monitored anymore.
+16:10:31 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+16:14:58 INFO  : Processing command line option -hwspec /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado_new/vivado_new.sdk/audio_mixer_wrapper.hdf.
+16:14:59 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+16:15:00 INFO  : XSDB server has started successfully.
+16:15:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:15:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248570950" && level==0} -index 1' command is executed.
+16:15:29 INFO  : FPGA configured successfully with bitstream "/home/INTRA/raogbe/workspace/soc-audio-mixer/vivado_new/vivado_new.sdk/audio_mixer_wrapper_hw_platform_0/audio_mixer_wrapper.bit"
+16:21:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:21:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248570950" && level==0} -index 1' command is executed.
+16:21:58 INFO  : FPGA configured successfully with bitstream "/home/INTRA/raogbe/workspace/soc-audio-mixer/vivado_new/vivado_new.sdk/audio_mixer_wrapper_hw_platform_0/audio_mixer_wrapper.bit"
