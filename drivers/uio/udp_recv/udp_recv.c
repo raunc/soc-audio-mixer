@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
 	fifo = open(myfifo, O_WRONLY);
 	udp_client_setup("10.255.255.255", 7891);
 
-	unsigned buffer[256];
+	unsigned buffer[64];
         printf("Waiting for new sample interrupt\n");
         while (1) {
 		udp_client_recv(buffer, sizeof(buffer));

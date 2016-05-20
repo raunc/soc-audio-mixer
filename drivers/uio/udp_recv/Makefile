@@ -15,7 +15,7 @@ CC=$(CROSS_COMPILE)gcc
 ##### Targets #####
 # Targets specify what will be executed during the make 
 all:
-	# let's compile the userspace program
+		# let's compile the userspace program
 	$(CC) udpclient.c udp_recv.c -o udp_recv -pthread
 	cp udp_recv ../../../sd-image
 
