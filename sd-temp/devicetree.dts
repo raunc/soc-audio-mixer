@@ -275,22 +275,11 @@
             reg = < 0xf8007100 0x20 >;
         };
 
-       audio_to_axi_0:  audio_to_axi@43C00000 {
+      	Audio_to_AXI_0:  Audio_to_AXI_0@43C00000 {
             compatible = "generic-uio";
             reg = < 0x43C00000 0x10000 >;
             interrupt-parent = <&ps7_scugic_0>;
             interrupts = < 0 29 1 >;
        };
-       axi_to_audio_0:  axi_to_audio@43C10000 {
-            compatible = "generic-uio";
-            reg = < 0x43C10000 0x10000 >;
-            interrupt-parent = <&ps7_scugic_0>;
-            interrupts = < 0 30 1 >;
-       };
-
-        zed_oled:  zed_oled@43C20000  {
-            compatible = "pmoled";
-            reg = < 0x43C20000 0x10000 >;
-        };
     };
 };

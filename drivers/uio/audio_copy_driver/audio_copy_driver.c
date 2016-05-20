@@ -12,48 +12,34 @@
 #include <fcntl.h>
 #include <stdint.h>
 
-#define SLV_REG_0   *((unsigned *)(ptr + 0))
-#define SLV_REG_1   *((unsigned *)(ptr + 4))
-#define SLV_REG_2   *((unsigned *)(ptr + 8))
-#define SLV_REG_3   *((unsigned *)(ptr + 12))
 
 #define AUDIO_IN_L_REG *((unsigned *)(audioInPtr + 0))
-#define AUDIO_IN_R_REG *((unsigned *)(audioOutPtr + 4))
+#define AUDIO_IN_R_REG *((unsigned *)(audioInPtr + 4))
 
-#define AUDIO_OUT_L_REG *((unsigned *)(audioInPtr + 0))
+#define AUDIO_OUT_L_REG *((unsigned *)(audioOutPtr + 0))
 #define AUDIO_OUT_R_REG *((unsigned *)(audioOutPtr + 4))
 
 
 int main(int argc, char *argv[])
 {
-    if (*argv[1] == 'p') {
-        printf("::::START_USAGE::::\n");
-        printf("EXAMPLE : %s /dev/uio0 /dev/uio1 \n", argv[0]);
-        printf("::::END_USAGE::::\n");
-    }
-    else {
         printf("Starting audio_copy_driver");
-  
-        // Device files from command arguments
-        char* audioInFile = argv[1];
-//        char* audioOutFile = argv[2];
-  
+    
         // Open devices
         printf("Opening in device");
-        int audioInFd = open(audioInFile, O_RDWR);
-        if (audioInFd < 1) { perror(argv[0]); return -1; }
+        int audioInFd = open("/dev/uio0", O_RDWR);
+        if (audioInFd < 1) { perror("UIO"); return -1; }
 
         // Audio out address
         unsigned address = 0x43c10000;
 
         printf("Opening /dev/mem");
         int audioOutFd = open("/dev/mem", O_RDWR);
-        if (audioOutFd < 1) { perror(argv[0]); return -1; }
+        if (audioOutFd < 1) { perror("mem"); return -1; }
 
         printf("/dev/mem opened");
 
         //Redirect stdout/printf into /dev/kmsg file (so it will be printed using printk)
-        freopen ("/dev/kmsg","w",stdout);
+        //freopen ("/dev/kmsg","w",stdout);
   
         //get architecture specific page size
         unsigned pageSize = sysconf(_SC_PAGESIZE);
@@ -120,6 +106,5 @@ int main(int argc, char *argv[])
   
         //close
         fclose(stdout);*/
-    }
     return 0;
 }

@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:23 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Fri May 20 12:12:47 2016
+# Process ID: 11550
+# Current directory: /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/audio-mixer.runs/impl_1
+# Command line: vivado -log audio_mixer_wrapper.vdi -applog -messageDb vivado.pb -mode batch -source audio_mixer_wrapper.tcl -notrace
+# Log file: /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/audio-mixer.runs/impl_1/audio_mixer_wrapper.vdi
+# Journal file: /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/audio-mixer.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source audio_mixer_wrapper.tcl -notrace
+Command: open_checkpoint audio_mixer_wrapper_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 948.551 ; gain = 0.000 ; free physical = 11720 ; free virtual = 15263
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/audio-mixer.runs/impl_1/.Xil/Vivado-11550-fx8.pld.ttu.ee/dcp/audio_mixer_wrapper_early.xdc]
+Finished Parsing XDC File [/home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/audio-mixer.runs/impl_1/.Xil/Vivado-11550-fx8.pld.ttu.ee/dcp/audio_mixer_wrapper_early.xdc]
+Parsing XDC File [/home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/audio-mixer.runs/impl_1/.Xil/Vivado-11550-fx8.pld.ttu.ee/dcp/audio_mixer_wrapper.xdc]
+Finished Parsing XDC File [/home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/audio-mixer.runs/impl_1/.Xil/Vivado-11550-fx8.pld.ttu.ee/dcp/audio_mixer_wrapper.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.30 ; elapsed = 00:00:00.31 . Memory (MB): peak = 1268.156 ; gain = 3.000 ; free physical = 11406 ; free virtual = 14995
+Restored from archive | CPU: 0.300000 secs | Memory: 2.342995 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.30 ; elapsed = 00:00:00.31 . Memory (MB): peak = 1268.156 ; gain = 3.000 ; free physical = 11406 ; free virtual = 14995
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+INFO: [Project 1-604] Checkpoint was created with  build 1215546
+open_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1269.156 ; gain = 320.605 ; free physical = 11403 ; free virtual = 14988
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC 23-20] Rule violation (BUFC-1) Input Buffer Connections - Input buffer AC_GPIO1_IBUF_inst has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC 23-20] Rule violation (RTSTAT-10) No routable loads - 1 net(s) have no routable loads. The problem bus(es) and/or net(s) are AC_GPIO1_IBUF.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 2 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 4 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./audio_mixer_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
+INFO: [Common 17-186] '/home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/audio-mixer.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Fri May 20 12:13:25 2016. For additional details about this file, please refer to the WebTalk help file at /cad/x_16/Vivado/2016.1/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+write_bitstream: Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 1744.750 ; gain = 475.594 ; free physical = 10955 ; free virtual = 14564
+INFO: [Common 17-206] Exiting Vivado at Fri May 20 12:13:25 2016...
