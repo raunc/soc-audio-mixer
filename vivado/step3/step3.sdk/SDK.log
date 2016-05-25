@@ -24,3 +24,55 @@
 11:59:18 INFO  : Invoking Bootgen: bootgen -image output.bif -o /home/INTRA/rauno.padari/workspace/soc-audio-mixer/sd-temp/BOOT.bin -w on
 11:59:18 INFO  : Overwriting existing bif file /home/INTRA/rauno.padari/workspace/soc-audio-mixer/sd-temp/output.bif
 11:59:18 INFO  : Bootgen command execution is done.
+14:01:44 INFO  : Processing command line option -hwspec /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf.
+14:01:45 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2457
+14:01:45 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+14:01:46 INFO  : XSDB server has started successfully.
+14:01:48 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1464174031000,  Project:1464165602000
+14:01:48 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_1' is different from /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf.
+14:01:48 INFO  : Copied contents of /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_1/system.hdf.
+14:01:52 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:01:52 INFO  : Clearing existing target manager status.
+14:01:56 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+14:11:39 INFO  : Processing command line option -hwspec /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf.
+14:11:40 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2464
+14:11:40 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+14:11:41 INFO  : XSDB server has started successfully.
+14:14:17 INFO  : Processing command line option -hwspec /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf.
+14:14:17 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2471
+14:14:18 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+14:14:18 INFO  : XSDB server has started successfully.
+14:15:11 INFO  : Processing command line option -hwspec /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf.
+14:15:11 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2478
+14:15:12 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+14:15:12 INFO  : XSDB server has started successfully.
+14:16:49 INFO  : Processing command line option -hwspec /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf.
+14:16:50 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2485
+14:16:50 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+14:16:51 INFO  : XSDB server has started successfully.
+14:18:19 INFO  : Processing command line option -hwspec /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf.
+14:18:20 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2492
+14:18:20 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+14:18:21 INFO  : XSDB server has started successfully.
+14:19:29 INFO  : Processing command line option -hwspec /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf.
+14:19:30 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2499
+14:19:30 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+14:19:31 INFO  : XSDB server has started successfully.
+14:32:28 INFO  : Processing command line option -hwspec /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf.
+14:32:29 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2506
+14:32:29 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+14:32:30 INFO  : XSDB server has started successfully.
+14:32:32 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1464175697000,  Project:1464174031000
+14:32:32 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_1' is different from /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf.
+14:32:32 INFO  : Copied contents of /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_1/system.hdf.
+14:32:36 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:32:38 INFO  : Clearing existing target manager status.
+14:32:40 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+14:48:44 INFO  : Processing command line option -hwspec /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf.
+14:48:44 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2513
+14:48:45 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+14:48:45 INFO  : XSDB server has started successfully.
+14:51:26 INFO  : Processing command line option -hwspec /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf.
+14:51:26 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2520
+14:51:27 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+14:51:27 INFO  : XSDB server has started successfully.

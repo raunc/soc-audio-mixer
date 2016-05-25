@@ -19,9 +19,9 @@ set_property ip_repo_paths {
   /home/INTRA/rauno.padari/workspace/soc-audio-mixer/ip_repo/zedboard_audio
   /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/ip_repo/AXI_to_Audio_1.0
   /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/ip_repo/Audio_to_AXI_1.0
-  /home/INTRA/rauno.padari/workspace/soc-audio-mixer/git/zedboard_audio
   /home/INTRA/rauno.padari/workspace/soc-audio-mixer/git/SoC_Design/IPs/Audio_Mixer
-  /home/INTRA/rauno.padari/workspace/soc-audio-mixer/git/ip_repo_vivado/adau1761_audio_1.0
+  /home/INTRA/rauno.padari/workspace/soc-audio-mixer/git/ip_repo_vivado/FILTER_IIR_1.0
+  /home/INTRA/rauno.padari/workspace/soc-audio-mixer/ip_repo/Volume_Pregain
 } [current_project]
 add_files /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]

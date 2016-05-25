@@ -2,7 +2,7 @@
    guistr: "# # String gsaved with Nlview 6.4.12  2014-12-16 bk=1.3272 VDI=35 GEI=35 GUI=JA:1.8
 #  -string -flagsOSRD
 preplace port AC_GPIO2 -pg 1 -y 40 -defaultsOSRD
-preplace port DDR -pg 1 -y 240 -defaultsOSRD
+preplace port DDR -pg 1 -y 210 -defaultsOSRD
 preplace port AC_MCLK -pg 1 -y 80 -defaultsOSRD
 preplace port AC_GPIO3 -pg 1 -y 60 -defaultsOSRD
 preplace port AC_ADR0 -pg 1 -y 20 -defaultsOSRD
@@ -12,49 +12,67 @@ preplace port AC_SDA -pg 1 -y 120 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -y 290 -defaultsOSRD
 preplace port AC_GPIO0 -pg 1 -y 60 -defaultsOSRD
 preplace port AC_GPIO1 -pg 1 -y 20 -defaultsOSRD
-preplace inst audio_mixer_0 -pg 1 -lvl 2 -y 570 -defaultsOSRD
-preplace inst rst_processing_system7_0_100M -pg 1 -lvl 1 -y 110 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 3 -y 790 -defaultsOSRD
-preplace inst zedboard_audio_0 -pg 1 -lvl 4 -y 860 -defaultsOSRD
-preplace inst Audio_to_AXI_0 -pg 1 -lvl 5 -y 140 -defaultsOSRD
-preplace inst AXI_to_Audio_0 -pg 1 -lvl 5 -y 470 -defaultsOSRD
-preplace inst AXI_to_Audio_1 -pg 1 -lvl 1 -y 480 -defaultsOSRD
-preplace inst processing_system7_0_axi_periph -pg 1 -lvl 3 -y 460 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 2 -y 310 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 2 4 990 250 NJ 250 NJ 250 NJ
-preplace netloc zedboard_audio_0_line_in_l 1 4 1 1740
-preplace netloc AC_GPIO2_1 1 0 4 NJ 850 NJ 850 NJ 850 1410
-preplace netloc zedboard_audio_0_AC_ADR0 1 4 2 N 770 NJ
-preplace netloc AXI_to_Audio_0_HPHONE_L 1 1 5 520 140 NJ 140 NJ 140 NJ 30 2140
-preplace netloc AXI_to_Audio_1_HPHONE_R 1 1 1 490
-preplace netloc processing_system7_0_axi_periph_M00_AXI 1 3 2 NJ 440 1730
-preplace netloc zedboard_audio_0_AC_GPIO0 1 4 2 1810 790 NJ
-preplace netloc zedboard_audio_0_AC_ADR1 1 4 2 1800 780 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 990
-preplace netloc AC_GPIO1_1 1 0 4 NJ 840 NJ 840 NJ 840 1390
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 3 170 20 NJ 20 980
-preplace netloc processing_system7_0_axi_periph_M02_AXI 1 0 4 170 390 NJ 170 NJ 240 1430
-preplace netloc audio_mixer_0_audio_mixed_a_b_right_out 1 2 2 NJ 640 1400
-preplace netloc zedboard_audio_0_line_in_r 1 4 1 1770
-preplace netloc AC_GPIO3_1 1 0 4 NJ 860 NJ 860 NJ 860 1430
-preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 0 5 160 410 500 460 1000 300 NJ 300 1800
-preplace netloc xlconstant_0_dout 1 3 1 1380
-preplace netloc AXI_to_Audio_0_HPHONE_R 1 1 5 530 150 NJ 150 NJ 150 NJ 40 2130
-preplace netloc Audio_to_AXI_0_NEW_SAMPLE_OUT 1 1 5 540 160 NJ 230 NJ 230 NJ 240 2120
-preplace netloc processing_system7_0_FIXED_IO 1 2 4 N 260 NJ 260 NJ 290 NJ
-preplace netloc AXI_to_Audio_1_HPHONE_L 1 1 1 500
-preplace netloc audio_mixer_0_audio_mixed_a_b_left_out 1 2 2 NJ 630 1420
-preplace netloc Net 1 4 2 1840 820 NJ
-preplace netloc zedboard_audio_0_AC_SCK 1 4 2 1830 810 NJ
-preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 2 NJ 130 1020
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 5 150 400 510 450 1010 620 1430 550 1750
-preplace netloc zedboard_audio_0_AC_MCLK 1 4 2 1820 800 NJ
-preplace netloc processing_system7_0_axi_periph_M01_AXI 1 3 2 NJ 460 1760
-preplace netloc zedboard_audio_0_new_sample 1 4 1 1790
-levelinfo -pg 1 100 330 770 1230 1570 1980 2230
+preplace inst audio_mixer_0 -pg 1 -lvl 3 -y 750 -defaultsOSRD
+preplace inst rst_processing_system7_0_100M -pg 1 -lvl 2 -y 90 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 4 -y 910 -defaultsOSRD
+preplace inst FILTER_IIR_0 -pg 1 -lvl 2 -y 700 -defaultsOSRD
+preplace inst zedboard_audio_0 -pg 1 -lvl 5 -y 860 -defaultsOSRD
+preplace inst Volume_Pregain_0 -pg 1 -lvl 1 -y 710 -defaultsOSRD
+preplace inst FILTER_IIR_1 -pg 1 -lvl 2 -y 1030 -defaultsOSRD
+preplace inst Volume_Pregain_1 -pg 1 -lvl 1 -y 1000 -defaultsOSRD
+preplace inst Audio_to_AXI_0 -pg 1 -lvl 6 -y 110 -defaultsOSRD
+preplace inst AXI_to_Audio_0 -pg 1 -lvl 6 -y 480 -defaultsOSRD
+preplace inst AXI_to_Audio_1 -pg 1 -lvl 2 -y 530 -defaultsOSRD
+preplace inst processing_system7_0_axi_periph -pg 1 -lvl 4 -y 560 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 3 -y 280 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 3 4 1500 270 NJ 210 NJ 210 NJ
+preplace netloc zedboard_audio_0_line_in_l 1 5 1 2230
+preplace netloc FILTER_IIR_0_AUDIO_OUT_L 1 2 1 960
+preplace netloc AXI_to_Audio_0_HPHONE_L 1 0 7 150 400 NJ 400 NJ 430 NJ 290 NJ 400 NJ 400 2610
+preplace netloc FILTER_IIR_1_AUDIO_OUT_L 1 2 1 980
+preplace netloc AXI_to_Audio_1_HPHONE_R 1 0 3 180 450 NJ 450 920
+preplace netloc Volume_Pregain_1_OUT_VOLCTRL_L 1 1 1 540
+preplace netloc Volume_Pregain_0_OUT_VOLCTRL_R 1 1 1 N
+preplace netloc AC_GPIO2_1 1 0 5 NJ 850 NJ 850 NJ 850 NJ 850 1930
+preplace netloc zedboard_audio_0_AC_ADR0 1 5 2 N 770 NJ
+preplace netloc processing_system7_0_axi_periph_M03_AXI 1 1 4 570 430 NJ 460 NJ 320 1850
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 4 2 1890 60 NJ
+preplace netloc zedboard_audio_0_AC_GPIO0 1 5 2 2270 790 NJ
+preplace netloc zedboard_audio_0_AC_ADR1 1 5 2 2250 780 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 3 1 1460
+preplace netloc processing_system7_0_axi_periph_M05_AXI 1 0 5 210 420 NJ 420 NJ 450 NJ 310 1870
+preplace netloc AC_GPIO1_1 1 0 5 NJ 840 NJ 840 NJ 840 NJ 840 1900
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 3 570 180 NJ 40 1440
+preplace netloc processing_system7_0_axi_periph_M02_AXI 1 1 4 560 370 NJ 130 NJ 250 1860
+preplace netloc audio_mixer_0_audio_mixed_a_b_right_out 1 3 2 NJ 830 1860
+preplace netloc zedboard_audio_0_line_in_r 1 5 1 2240
+preplace netloc AC_GPIO3_1 1 0 5 NJ 860 NJ 860 NJ 860 NJ 860 1940
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 0 6 200 620 520 460 950 420 1510 200 NJ 200 2280
+preplace netloc processing_system7_0_axi_periph_M06_AXI 1 0 5 220 600 NJ 600 NJ 600 NJ 810 1850
+preplace netloc FILTER_IIR_0_AUDIO_OUT_R 1 2 1 940
+preplace netloc AXI_to_Audio_0_HPHONE_R 1 0 7 160 410 NJ 410 NJ 440 NJ 300 NJ 410 NJ 410 2600
+preplace netloc FILTER_IIR_1_AUDIO_OUT_R 1 2 1 990
+preplace netloc Volume_Pregain_1_OUT_VOLCTRL_R 1 1 1 500
+preplace netloc Volume_Pregain_0_OUT_RDY 1 1 1 500
+preplace netloc xlconstant_0_dout 1 4 1 1850
+preplace netloc Audio_to_AXI_0_NEW_SAMPLE_OUT 1 2 5 990 50 NJ 50 NJ 50 NJ 10 2600
+preplace netloc processing_system7_0_FIXED_IO 1 3 4 1470 280 NJ 290 NJ 290 NJ
+preplace netloc AXI_to_Audio_1_HPHONE_L 1 0 3 170 440 NJ 440 930
+preplace netloc Volume_Pregain_0_OUT_VOLCTRL_L 1 1 1 N
+preplace netloc Volume_Pregain_1_OUT_RDY 1 1 1 530
+preplace netloc audio_mixer_0_audio_mixed_a_b_left_out 1 3 2 NJ 820 1880
+preplace netloc Net 1 5 2 2300 820 NJ
+preplace netloc zedboard_audio_0_AC_SCK 1 5 2 2290 810 NJ
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 2 2 950 120 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 190 610 510 390 970 110 1490 800 1910 190 2270
+preplace netloc zedboard_audio_0_AC_MCLK 1 5 2 2280 800 NJ
+preplace netloc processing_system7_0_axi_periph_M04_AXI 1 1 4 550 380 NJ 140 NJ 260 1880
+preplace netloc processing_system7_0_axi_periph_M01_AXI 1 4 2 1930 460 NJ
+preplace netloc zedboard_audio_0_new_sample 1 5 1 2260
+levelinfo -pg 1 100 360 760 1230 1700 2090 2460 2690
 ",
 }
 {
-   da_axi4_cnt: "3",
+   da_axi4_cnt: "7",
    da_ps7_cnt: "1",
 }

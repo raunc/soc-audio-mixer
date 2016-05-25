@@ -2,9 +2,9 @@
 # Webtalk v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:19:00 MDT 2015
 # 
-# Start of session at: Fri May 20 13:58:00 2016
-# Process ID: 24032
-# Log file: /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step1/step1.sdk/webtalk/webtalk.log
-# Journal file: /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step1/step1.sdk/webtalk/webtalk.jou
+# Start of session at: Wed May 25 13:32:57 2016
+# Process ID: 14264
+# Log file: /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/webtalk/webtalk.log
+# Journal file: /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/webtalk/webtalk.jou
 #-----------------------------------------------------------
 source sdk_webtalk.tcl

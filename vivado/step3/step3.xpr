@@ -16,9 +16,9 @@
     <Option Name="IPRepoPath" Val="$PPRDIR/../../ip_repo/zedboard_audio"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/AXI_to_Audio_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/Audio_to_AXI_1.0"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../git/zedboard_audio"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../git/SoC_Design/IPs/Audio_Mixer"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../git/ip_repo_vivado/adau1761_audio_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../git/ip_repo_vivado/FILTER_IIR_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../ip_repo/Volume_Pregain"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="EnableCoreContainerForIPI" Val="FALSE"/>
   </Configuration>
@@ -44,11 +44,15 @@
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_audio_mixer_0_0/design_1_audio_mixer_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_AXI_to_Audio_1_0/design_1_AXI_to_Audio_1_0.xci"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_zedboard_audio_0_0/design_1_zedboard_audio_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hdl/design_1.hwdef"/>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1.hwh"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_auto_pc_0/design_1_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1.hwh"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hdl/design_1.hwdef"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Volume_Pregain_1_0/design_1_Volume_Pregain_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_FILTER_IIR_1_0/design_1_FILTER_IIR_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_FILTER_IIR_0_0/design_1_FILTER_IIR_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_Volume_Pregain_0_0/design_1_Volume_Pregain_0_0.xci"/>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="design_1_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="hw_handoff/design_1_bd.tcl"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.vhd">
         <FileInfo>

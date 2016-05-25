@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
-| Date             : Wed May 25 11:39:41 2016
+| Date             : Wed May 25 14:27:45 2016
 | Host             : fx7.pld.ttu.ee running 64-bit openSUSE Leap 42.1 (x86_64)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb
 | Design           : design_1_wrapper
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 1.828 |
-| Dynamic (W)              | 1.667 |
-| Device Static (W)        | 0.161 |
+| Total On-Chip Power (W)  | 1.919 |
+| Dynamic (W)              | 1.756 |
+| Device Static (W)        | 0.163 |
 | Effective TJA (C/W)      | 11.5  |
-| Max Ambient (C)          | 63.9  |
-| Junction Temperature (C) | 46.1  |
+| Max Ambient (C)          | 62.9  |
+| Junction Temperature (C) | 47.1  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -49,21 +49,22 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.010 |        5 |       --- |             --- |
-| Slice Logic             |     0.002 |     3669 |       --- |             --- |
-|   LUT as Logic          |     0.002 |     1428 |     53200 |            2.68 |
-|   Register              |    <0.001 |     1451 |    106400 |            1.36 |
-|   CARRY4                |    <0.001 |       22 |     13300 |            0.17 |
-|   BUFG                  |    <0.001 |        1 |        32 |            3.13 |
-|   LUT as Shift Register |    <0.001 |       72 |     17400 |            0.41 |
-|   Others                |     0.000 |      223 |       --- |             --- |
-| Signals                 |     0.003 |     2595 |       --- |             --- |
+| Clocks                  |     0.033 |        5 |       --- |             --- |
+| Slice Logic             |     0.035 |    26298 |       --- |             --- |
+|   LUT as Logic          |     0.031 |     9458 |     53200 |           17.78 |
+|   CARRY4                |     0.003 |      620 |     13300 |            4.66 |
+|   Register              |     0.002 |    13408 |    106400 |           12.60 |
+|   LUT as Shift Register |    <0.001 |       70 |     17400 |            0.40 |
+|   BUFG                  |    <0.001 |       12 |        32 |           37.50 |
+|   Others                |     0.000 |      386 |       --- |             --- |
+|   F7/F8 Muxes           |     0.000 |      128 |     53200 |            0.24 |
+| Signals                 |     0.035 |    20182 |       --- |             --- |
 | Block RAM               |    <0.001 |      0.5 |       140 |            0.36 |
 | MMCM                    |     0.121 |        1 |         4 |           25.00 |
 | I/O                     |     0.003 |        9 |       200 |            4.50 |
 | PS7                     |     1.529 |        1 |       --- |             --- |
-| Static Power            |     0.161 |          |           |                 |
-| Total                   |     1.828 |          |           |                 |
+| Static Power            |     0.163 |          |           |                 |
+| Total                   |     1.919 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.031 |       0.015 |      0.016 |
+| Vccint    |       1.000 |     0.119 |       0.103 |      0.016 |
 | Vccaux    |       1.800 |     0.088 |       0.067 |      0.021 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -86,7 +87,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.750 |       0.718 |      0.032 |
+| Vccpint   |       1.000 |     0.751 |       0.718 |      0.033 |
 | Vccpaux   |       1.800 |     0.061 |       0.051 |      0.010 |
 | Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.459 |       0.457 |      0.002 |
@@ -151,26 +152,74 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| design_1_wrapper                                 |     1.667 |
-|   design_1_i                                     |     1.665 |
-|     AXI_to_Audio_0                               |     0.001 |
-|       U0                                         |     0.001 |
-|         AXI_to_Audio_v1_0_S00_AXI_inst           |     0.001 |
-|     AXI_to_Audio_1                               |     0.001 |
-|       U0                                         |     0.001 |
-|         AXI_to_Audio_v1_0_S00_AXI_inst           |     0.001 |
+| design_1_wrapper                                 |     1.756 |
+|   design_1_i                                     |     1.753 |
+|     AXI_to_Audio_0                               |    <0.001 |
+|       U0                                         |    <0.001 |
+|         AXI_to_Audio_v1_0_S00_AXI_inst           |    <0.001 |
+|     AXI_to_Audio_1                               |    <0.001 |
+|       U0                                         |    <0.001 |
+|         AXI_to_Audio_v1_0_S00_AXI_inst           |    <0.001 |
 |     Audio_to_AXI_0                               |    <0.001 |
 |       U0                                         |    <0.001 |
 |         Audio_to_AXI_v1_0_S00_AXI_inst           |    <0.001 |
-|     audio_mixer_0                                |     0.000 |
-|       U0                                         |     0.000 |
-|     processing_system7_0                         |     1.530 |
-|       inst                                       |     1.530 |
-|     processing_system7_0_axi_periph              |     0.007 |
-|       s00_couplers                               |     0.006 |
-|         auto_pc                                  |     0.006 |
-|           inst                                   |     0.006 |
-|             gen_axilite.gen_b2s_conv.axilite_b2s |     0.006 |
+|     FILTER_IIR_0                                 |     0.030 |
+|       U0                                         |     0.030 |
+|         FILTER_IIR_v1_0_S00_AXI_inst             |     0.030 |
+|           Filter_Top_Level_inst                  |     0.028 |
+|             IIR_BP_L                             |     0.005 |
+|               mul                                |     0.003 |
+|             IIR_BP_R                             |     0.005 |
+|               mul                                |     0.003 |
+|             IIR_HP_L                             |     0.005 |
+|               mul                                |     0.003 |
+|             IIR_HP_R                             |     0.005 |
+|               mul                                |     0.003 |
+|             IIR_LP_L                             |     0.005 |
+|               mul                                |     0.003 |
+|             IIR_LP_R                             |     0.005 |
+|               mul                                |     0.003 |
+|     FILTER_IIR_1                                 |     0.029 |
+|       U0                                         |     0.029 |
+|         FILTER_IIR_v1_0_S00_AXI_inst             |     0.029 |
+|           Filter_Top_Level_inst                  |     0.028 |
+|             IIR_BP_L                             |     0.005 |
+|               mul                                |     0.003 |
+|             IIR_BP_R                             |     0.005 |
+|               mul                                |     0.003 |
+|             IIR_HP_L                             |     0.005 |
+|               mul                                |     0.003 |
+|             IIR_HP_R                             |     0.005 |
+|               mul                                |     0.003 |
+|             IIR_LP_L                             |     0.005 |
+|               mul                                |     0.003 |
+|             IIR_LP_R                             |     0.005 |
+|               mul                                |     0.003 |
+|     Volume_Pregain_0                             |     0.013 |
+|       U0                                         |     0.013 |
+|         Volume_Pregain_v1_0_S00_AXI_inst         |     0.013 |
+|           Volume_Pregain_Top_Module_inst         |     0.013 |
+|             AmplifierFP_L                        |     0.006 |
+|               Amp_multiplier                     |     0.006 |
+|             AmplifierFP_R                        |     0.006 |
+|               Amp_multiplier                     |     0.006 |
+|     Volume_Pregain_1                             |     0.013 |
+|       U0                                         |     0.013 |
+|         Volume_Pregain_v1_0_S00_AXI_inst         |     0.013 |
+|           Volume_Pregain_Top_Module_inst         |     0.013 |
+|             AmplifierFP_L                        |     0.006 |
+|               Amp_multiplier                     |     0.006 |
+|             AmplifierFP_R                        |     0.006 |
+|               Amp_multiplier                     |     0.006 |
+|     audio_mixer_0                                |    <0.001 |
+|       U0                                         |    <0.001 |
+|     processing_system7_0                         |     1.532 |
+|       inst                                       |     1.532 |
+|     processing_system7_0_axi_periph              |     0.006 |
+|       s00_couplers                               |     0.005 |
+|         auto_pc                                  |     0.005 |
+|           inst                                   |     0.005 |
+|             gen_axilite.gen_b2s_conv.axilite_b2s |     0.005 |
 |               RD.ar_channel_0                    |    <0.001 |
 |                 ar_cmd_fsm_0                     |    <0.001 |
 |                 cmd_translator_0                 |    <0.001 |
@@ -179,7 +228,7 @@ Table of Contents
 |               RD.r_channel_0                     |     0.002 |
 |                 rd_data_fifo_0                   |     0.001 |
 |                 transaction_fifo_0               |    <0.001 |
-|               SI_REG                             |     0.002 |
+|               SI_REG                             |     0.001 |
 |                 ar_pipe                          |    <0.001 |
 |                 aw_pipe                          |    <0.001 |
 |                 b_pipe                           |    <0.001 |
@@ -207,8 +256,8 @@ Table of Contents
 |         SEQ                                      |    <0.001 |
 |           SEQ_COUNTER                            |    <0.001 |
 |     xlconstant_0                                 |     0.000 |
-|     zedboard_audio_0                             |     0.124 |
-|       U0                                         |     0.124 |
+|     zedboard_audio_0                             |     0.127 |
+|       U0                                         |     0.127 |
 |         Inst_adau1761_izedboard                  |     0.002 |
 |           Inst_i2c                               |     0.001 |
 |             Inst_adau1761_configuraiton_data     |    <0.001 |

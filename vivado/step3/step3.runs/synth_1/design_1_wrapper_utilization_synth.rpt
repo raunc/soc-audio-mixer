@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
-| Date         : Wed May 25 11:37:20 2016
+| Date         : Wed May 25 14:23:38 2016
 | Host         : fx7.pld.ttu.ee running 64-bit openSUSE Leap 42.1 (x86_64)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -27,20 +27,20 @@ Table of Contents
 1. Slice Logic
 --------------
 
-+----------------------------+------+-------+-----------+-------+
-|          Site Type         | Used | Fixed | Available | Util% |
-+----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 1738 |     0 |     53200 |  3.27 |
-|   LUT as Logic             | 1660 |     0 |     53200 |  3.12 |
-|   LUT as Memory            |   78 |     0 |     17400 |  0.45 |
-|     LUT as Distributed RAM |    0 |     0 |           |       |
-|     LUT as Shift Register  |   78 |     0 |           |       |
-| Slice Registers            | 1575 |     0 |    106400 |  1.48 |
-|   Register as Flip Flop    | 1567 |     0 |    106400 |  1.47 |
-|   Register as Latch        |    8 |     0 |    106400 | <0.01 |
-| F7 Muxes                   |    0 |     0 |     26600 |  0.00 |
-| F8 Muxes                   |    0 |     0 |     13300 |  0.00 |
-+----------------------------+------+-------+-----------+-------+
++----------------------------+-------+-------+-----------+-------+
+|          Site Type         |  Used | Fixed | Available | Util% |
++----------------------------+-------+-------+-----------+-------+
+| Slice LUTs*                |  9749 |     0 |     53200 | 18.33 |
+|   LUT as Logic             |  9673 |     0 |     53200 | 18.18 |
+|   LUT as Memory            |    76 |     0 |     17400 |  0.44 |
+|     LUT as Distributed RAM |     0 |     0 |           |       |
+|     LUT as Shift Register  |    76 |     0 |           |       |
+| Slice Registers            | 13500 |     0 |    106400 | 12.69 |
+|   Register as Flip Flop    | 13492 |     0 |    106400 | 12.68 |
+|   Register as Latch        |     8 |     0 |    106400 | <0.01 |
+| F7 Muxes                   |   128 |     0 |     26600 |  0.48 |
+| F8 Muxes                   |     0 |     0 |     13300 |  0.00 |
++----------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -56,10 +56,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 8     |          Yes |           - |        Reset |
-| 71    |          Yes |         Set |            - |
-| 1496  |          Yes |       Reset |            - |
+| 12    |          Yes |           - |          Set |
+| 788   |          Yes |           - |        Reset |
+| 97    |          Yes |         Set |            - |
+| 12603 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -116,7 +116,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    3 |     0 |        32 |  9.38 |
+| BUFGCTRL   |   14 |     0 |        32 | 43.75 |
 | BUFIO      |    0 |     0 |        16 |  0.00 |
 | MMCME2_ADV |    1 |     0 |         4 | 25.00 |
 | PLLE2_ADV  |    0 |     0 |         4 |  0.00 |
@@ -146,30 +146,33 @@ Table of Contents
 7. Primitives
 -------------
 
-+------------+------+----------------------+
-|  Ref Name  | Used |  Functional Category |
-+------------+------+----------------------+
-| FDRE       | 1496 |         Flop & Latch |
-| LUT2       |  628 |                  LUT |
-| LUT6       |  580 |                  LUT |
-| LUT3       |  314 |                  LUT |
-| LUT5       |  260 |                  LUT |
-| LUT4       |  183 |                  LUT |
-| LUT1       |  175 |                  LUT |
-| BIBUF      |  130 |                   IO |
-| FDSE       |   71 |         Flop & Latch |
-| SRLC32E    |   49 |   Distributed Memory |
-| CARRY4     |   34 |           CarryLogic |
-| SRL16E     |   29 |   Distributed Memory |
-| LDCE       |    8 |         Flop & Latch |
-| OBUF       |    5 |                   IO |
-| IBUF       |    4 |                   IO |
-| BUFG       |    3 |                Clock |
-| RAMB18E1   |    1 |         Block Memory |
-| PS7        |    1 | Specialized Resource |
-| OBUFT      |    1 |                   IO |
-| MMCME2_ADV |    1 |                Clock |
-+------------+------+----------------------+
++------------+-------+----------------------+
+|  Ref Name  |  Used |  Functional Category |
++------------+-------+----------------------+
+| FDRE       | 12603 |         Flop & Latch |
+| LUT6       |  3380 |                  LUT |
+| LUT5       |  2875 |                  LUT |
+| LUT4       |  2204 |                  LUT |
+| LUT3       |  1733 |                  LUT |
+| LUT2       |  1498 |                  LUT |
+| FDCE       |   780 |         Flop & Latch |
+| CARRY4     |   626 |           CarryLogic |
+| LUT1       |   207 |                  LUT |
+| BIBUF      |   130 |                   IO |
+| MUXF7      |   128 |                MuxFx |
+| FDSE       |    97 |         Flop & Latch |
+| SRLC32E    |    49 |   Distributed Memory |
+| SRL16E     |    27 |   Distributed Memory |
+| BUFG       |    14 |                Clock |
+| FDPE       |    12 |         Flop & Latch |
+| LDCE       |     8 |         Flop & Latch |
+| OBUF       |     5 |                   IO |
+| IBUF       |     4 |                   IO |
+| RAMB18E1   |     1 |         Block Memory |
+| PS7        |     1 | Specialized Resource |
+| OBUFT      |     1 |                   IO |
+| MMCME2_ADV |     1 |                Clock |
++------------+-------+----------------------+
 
 
 8. Black Boxes

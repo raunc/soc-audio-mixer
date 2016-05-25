@@ -59,9 +59,9 @@ set rc [catch {
   /home/INTRA/rauno.padari/workspace/soc-audio-mixer/ip_repo/zedboard_audio
   /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/ip_repo/AXI_to_Audio_1.0
   /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/ip_repo/Audio_to_AXI_1.0
-  /home/INTRA/rauno.padari/workspace/soc-audio-mixer/git/zedboard_audio
   /home/INTRA/rauno.padari/workspace/soc-audio-mixer/git/SoC_Design/IPs/Audio_Mixer
-  /home/INTRA/rauno.padari/workspace/soc-audio-mixer/git/ip_repo_vivado/adau1761_audio_1.0
+  /home/INTRA/rauno.padari/workspace/soc-audio-mixer/git/ip_repo_vivado/FILTER_IIR_1.0
+  /home/INTRA/rauno.padari/workspace/soc-audio-mixer/ip_repo/Volume_Pregain
 } [current_project]
   set_property ip_output_repo /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.cache/ip [current_project]
   add_files -quiet /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.runs/synth_1/design_1_wrapper.dcp
