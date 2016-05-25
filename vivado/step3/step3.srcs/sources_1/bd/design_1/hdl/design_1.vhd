@@ -1,8 +1,8 @@
 --Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
---Date        : Fri May 20 17:35:09 2016
---Host        : fx8.pld.ttu.ee running 64-bit openSUSE Leap 42.1 (x86_64)
+--Date        : Wed May 25 11:36:04 2016
+--Host        : fx7.pld.ttu.ee running 64-bit openSUSE Leap 42.1 (x86_64)
 --Command     : generate_target design_1.bd
 --Design      : design_1
 --Purpose     : IP block netlist
@@ -1510,28 +1510,6 @@ architecture STRUCTURE of design_1 is
     PS_PORB : inout STD_LOGIC
   );
   end component design_1_processing_system7_0_0;
-  component design_1_zed_audio_0_0 is
-  port (
-    clk_100 : in STD_LOGIC;
-    AC_ADR0 : out STD_LOGIC;
-    AC_ADR1 : out STD_LOGIC;
-    AC_GPIO0 : out STD_LOGIC;
-    AC_GPIO1 : in STD_LOGIC;
-    AC_GPIO2 : in STD_LOGIC;
-    AC_GPIO3 : in STD_LOGIC;
-    hphone_l : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    hphone_l_valid : in STD_LOGIC;
-    hphone_r : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    hphone_r_valid_dummy : in STD_LOGIC;
-    line_in_l : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    line_in_r : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    new_sample : out STD_LOGIC;
-    sample_clk_48k : out STD_LOGIC;
-    AC_MCLK : out STD_LOGIC;
-    AC_SCK : out STD_LOGIC;
-    AC_SDA : inout STD_LOGIC
-  );
-  end component design_1_zed_audio_0_0;
   component design_1_xlconstant_0_0 is
   port (
     dout : out STD_LOGIC_VECTOR ( 0 to 0 )
@@ -1644,6 +1622,28 @@ architecture STRUCTURE of design_1 is
     s00_axi_aresetn : in STD_LOGIC
   );
   end component design_1_AXI_to_Audio_1_0;
+  component design_1_zedboard_audio_0_0 is
+  port (
+    clk_100 : in STD_LOGIC;
+    AC_ADR0 : out STD_LOGIC;
+    AC_ADR1 : out STD_LOGIC;
+    AC_GPIO0 : out STD_LOGIC;
+    AC_GPIO1 : in STD_LOGIC;
+    AC_GPIO2 : in STD_LOGIC;
+    AC_GPIO3 : in STD_LOGIC;
+    hphone_l : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    hphone_l_valid : in STD_LOGIC;
+    hphone_r : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    hphone_r_valid_dummy : in STD_LOGIC;
+    line_in_l : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    line_in_r : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    new_sample : out STD_LOGIC;
+    sample_clk_48k : out STD_LOGIC;
+    AC_MCLK : out STD_LOGIC;
+    AC_SCK : out STD_LOGIC;
+    AC_SDA : inout STD_LOGIC
+  );
+  end component design_1_zedboard_audio_0_0;
   signal AC_GPIO1_1 : STD_LOGIC;
   signal AC_GPIO2_1 : STD_LOGIC;
   signal AC_GPIO3_1 : STD_LOGIC;
@@ -1778,14 +1778,14 @@ architecture STRUCTURE of design_1 is
   signal rst_processing_system7_0_100M_interconnect_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_processing_system7_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal zed_audio_0_AC_ADR0 : STD_LOGIC;
-  signal zed_audio_0_AC_ADR1 : STD_LOGIC;
-  signal zed_audio_0_AC_GPIO0 : STD_LOGIC;
-  signal zed_audio_0_AC_MCLK : STD_LOGIC;
-  signal zed_audio_0_AC_SCK : STD_LOGIC;
-  signal zed_audio_0_line_in_l : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal zed_audio_0_line_in_r : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal zed_audio_0_new_sample : STD_LOGIC;
+  signal zedboard_audio_0_AC_ADR0 : STD_LOGIC;
+  signal zedboard_audio_0_AC_ADR1 : STD_LOGIC;
+  signal zedboard_audio_0_AC_GPIO0 : STD_LOGIC;
+  signal zedboard_audio_0_AC_MCLK : STD_LOGIC;
+  signal zedboard_audio_0_AC_SCK : STD_LOGIC;
+  signal zedboard_audio_0_line_in_l : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal zedboard_audio_0_line_in_r : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal zedboard_audio_0_new_sample : STD_LOGIC;
   signal NLW_processing_system7_0_ENET0_PTP_DELAY_REQ_RX_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_ENET0_PTP_DELAY_REQ_TX_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_ENET0_PTP_PDELAY_REQ_RX_UNCONNECTED : STD_LOGIC;
@@ -1804,16 +1804,16 @@ architecture STRUCTURE of design_1 is
   signal NLW_rst_processing_system7_0_100M_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_processing_system7_0_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_processing_system7_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_zed_audio_0_sample_clk_48k_UNCONNECTED : STD_LOGIC;
+  signal NLW_zedboard_audio_0_sample_clk_48k_UNCONNECTED : STD_LOGIC;
 begin
-  AC_ADR0 <= zed_audio_0_AC_ADR0;
-  AC_ADR1 <= zed_audio_0_AC_ADR1;
-  AC_GPIO0 <= zed_audio_0_AC_GPIO0;
+  AC_ADR0 <= zedboard_audio_0_AC_ADR0;
+  AC_ADR1 <= zedboard_audio_0_AC_ADR1;
+  AC_GPIO0 <= zedboard_audio_0_AC_GPIO0;
   AC_GPIO1_1 <= AC_GPIO1;
   AC_GPIO2_1 <= AC_GPIO2;
   AC_GPIO3_1 <= AC_GPIO3;
-  AC_MCLK <= zed_audio_0_AC_MCLK;
-  AC_SCK <= zed_audio_0_AC_SCK;
+  AC_MCLK <= zedboard_audio_0_AC_MCLK;
+  AC_SCK <= zedboard_audio_0_AC_SCK;
 AXI_to_Audio_0: component design_1_AXI_to_Audio_0_0
      port map (
       HPHONE_L(23 downto 0) => AXI_to_Audio_0_HPHONE_L(23 downto 0),
@@ -1868,9 +1868,9 @@ AXI_to_Audio_1: component design_1_AXI_to_Audio_1_0
     );
 Audio_to_AXI_0: component design_1_Audio_to_AXI_0_0
      port map (
-      LINE_IN_L(23 downto 0) => zed_audio_0_line_in_l(23 downto 0),
-      LINE_IN_R(23 downto 0) => zed_audio_0_line_in_r(23 downto 0),
-      NEW_SAMPLE_IN => zed_audio_0_new_sample,
+      LINE_IN_L(23 downto 0) => zedboard_audio_0_line_in_l(23 downto 0),
+      LINE_IN_R(23 downto 0) => zedboard_audio_0_line_in_r(23 downto 0),
+      NEW_SAMPLE_IN => zedboard_audio_0_new_sample,
       NEW_SAMPLE_OUT => Audio_to_AXI_0_NEW_SAMPLE_OUT,
       s00_axi_aclk => processing_system7_0_FCLK_CLK0,
       s00_axi_araddr(3 downto 0) => processing_system7_0_axi_periph_M00_AXI_ARADDR(3 downto 0),
@@ -2118,25 +2118,25 @@ xlconstant_0: component design_1_xlconstant_0_0
      port map (
       dout(0) => xlconstant_0_dout(0)
     );
-zed_audio_0: component design_1_zed_audio_0_0
+zedboard_audio_0: component design_1_zedboard_audio_0_0
      port map (
-      AC_ADR0 => zed_audio_0_AC_ADR0,
-      AC_ADR1 => zed_audio_0_AC_ADR1,
-      AC_GPIO0 => zed_audio_0_AC_GPIO0,
+      AC_ADR0 => zedboard_audio_0_AC_ADR0,
+      AC_ADR1 => zedboard_audio_0_AC_ADR1,
+      AC_GPIO0 => zedboard_audio_0_AC_GPIO0,
       AC_GPIO1 => AC_GPIO1_1,
       AC_GPIO2 => AC_GPIO2_1,
       AC_GPIO3 => AC_GPIO3_1,
-      AC_MCLK => zed_audio_0_AC_MCLK,
-      AC_SCK => zed_audio_0_AC_SCK,
+      AC_MCLK => zedboard_audio_0_AC_MCLK,
+      AC_SCK => zedboard_audio_0_AC_SCK,
       AC_SDA => AC_SDA,
       clk_100 => processing_system7_0_FCLK_CLK0,
       hphone_l(23 downto 0) => audio_mixer_0_audio_mixed_a_b_left_out(23 downto 0),
       hphone_l_valid => xlconstant_0_dout(0),
       hphone_r(23 downto 0) => audio_mixer_0_audio_mixed_a_b_right_out(23 downto 0),
       hphone_r_valid_dummy => xlconstant_0_dout(0),
-      line_in_l(23 downto 0) => zed_audio_0_line_in_l(23 downto 0),
-      line_in_r(23 downto 0) => zed_audio_0_line_in_r(23 downto 0),
-      new_sample => zed_audio_0_new_sample,
-      sample_clk_48k => NLW_zed_audio_0_sample_clk_48k_UNCONNECTED
+      line_in_l(23 downto 0) => zedboard_audio_0_line_in_l(23 downto 0),
+      line_in_r(23 downto 0) => zedboard_audio_0_line_in_r(23 downto 0),
+      new_sample => zedboard_audio_0_new_sample,
+      sample_clk_48k => NLW_zedboard_audio_0_sample_clk_48k_UNCONNECTED
     );
 end STRUCTURE;

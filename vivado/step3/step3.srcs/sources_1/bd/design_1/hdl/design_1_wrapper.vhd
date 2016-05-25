@@ -1,8 +1,8 @@
 --Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
---Date        : Fri May 20 17:35:09 2016
---Host        : fx8.pld.ttu.ee running 64-bit openSUSE Leap 42.1 (x86_64)
+--Date        : Wed May 25 11:36:04 2016
+--Host        : fx7.pld.ttu.ee running 64-bit openSUSE Leap 42.1 (x86_64)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
 --Purpose     : IP block netlist
@@ -71,14 +71,14 @@ architecture STRUCTURE of design_1_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     AC_ADR0 : out STD_LOGIC;
-    AC_SCK : out STD_LOGIC;
-    AC_SDA : inout STD_LOGIC;
+    AC_ADR1 : out STD_LOGIC;
     AC_GPIO0 : out STD_LOGIC;
     AC_GPIO1 : in STD_LOGIC;
     AC_GPIO2 : in STD_LOGIC;
-    AC_MCLK : out STD_LOGIC;
     AC_GPIO3 : in STD_LOGIC;
-    AC_ADR1 : out STD_LOGIC
+    AC_MCLK : out STD_LOGIC;
+    AC_SCK : out STD_LOGIC;
+    AC_SDA : inout STD_LOGIC
   );
   end component design_1;
 begin

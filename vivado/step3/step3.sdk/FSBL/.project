@@ -27,7 +27,7 @@
 		<link>
 			<name>src/ps7_init.c</name>
 			<type>1</type>
-			<location>/home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step1/step1.sdk/design_1_wrapper_hw_platform_0/ps7_init.c</location>
+			<location>/home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper_hw_platform_0/ps7_init.c</location>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -1,8 +1,8 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
-| Date             : Fri May 20 17:38:28 2016
-| Host             : fx8.pld.ttu.ee running 64-bit openSUSE Leap 42.1 (x86_64)
+| Date             : Wed May 25 11:39:41 2016
+| Host             : fx7.pld.ttu.ee running 64-bit openSUSE Leap 42.1 (x86_64)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb
 | Design           : design_1_wrapper
 | Device           : xc7z020clg484-1
@@ -136,9 +136,9 @@ Table of Contents
 +-------------------+-------------------------------------------------------------+-----------------+
 | Clock             | Domain                                                      | Constraint (ns) |
 +-------------------+-------------------------------------------------------------+-----------------+
-| clk_feedback      | design_1_i/zed_audio_0/U0/i_clocking/clk_feedback           |            50.0 |
+| clk_feedback      | design_1_i/zedboard_audio_0/U0/i_clocking/clk_feedback      |            50.0 |
 | clk_fpga_0        | design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            10.0 |
-| zed_audio_clk_48M | design_1_i/zed_audio_0/U0/i_clocking/zed_audio_clk_48M      |            20.8 |
+| zed_audio_clk_48M | design_1_i/zedboard_audio_0/U0/i_clocking/zed_audio_clk_48M |            20.8 |
 +-------------------+-------------------------------------------------------------+-----------------+
 
 
@@ -207,7 +207,7 @@ Table of Contents
 |         SEQ                                      |    <0.001 |
 |           SEQ_COUNTER                            |    <0.001 |
 |     xlconstant_0                                 |     0.000 |
-|     zed_audio_0                                  |     0.124 |
+|     zedboard_audio_0                             |     0.124 |
 |       U0                                         |     0.124 |
 |         Inst_adau1761_izedboard                  |     0.002 |
 |           Inst_i2c                               |     0.001 |

@@ -2,7 +2,7 @@
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <spirit:vendor>user.org</spirit:vendor>
   <spirit:library>customized_ip</spirit:library>
-  <spirit:name>design_1_zed_audio_0_0</spirit:name>
+  <spirit:name>design_1_zedboard_audio_0_0</spirit:name>
   <spirit:version>1.0</spirit:version>
   <spirit:model>
     <spirit:views>
@@ -16,7 +16,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>610401cd</spirit:value>
+            <spirit:value>cccf1437</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -32,7 +32,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 20 10:04:22 UTC 2016</spirit:value>
+            <spirit:value>Wed May 25 08:36:03 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -51,7 +51,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>customizationCRC</spirit:name>
-            <spirit:value>610401cd</spirit:value>
+            <spirit:value>cccf1437</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>customizationCRCversion</spirit:name>
@@ -67,7 +67,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 20 10:04:22 UTC 2016</spirit:value>
+            <spirit:value>Wed May 25 08:36:03 UTC 2016</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>StaleAtRelink</spirit:name>
@@ -315,52 +315,52 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../../../ipshared/user.org/zed_audio_v1_0/8de2dafc/hdl/i3c2.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/user.org/zedboard_audio_v1_0/06eb202a/hdl/i3c2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/user.org/zed_audio_v1_0/8de2dafc/hdl/adau1761_configuraiton_data.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/user.org/zedboard_audio_v1_0/06eb202a/hdl/adau1761_configuraiton_data.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/user.org/zed_audio_v1_0/8de2dafc/hdl/i2s_data_interface.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/user.org/zedboard_audio_v1_0/06eb202a/hdl/i2s_data_interface.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/user.org/zed_audio_v1_0/8de2dafc/hdl/i2c.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/user.org/zedboard_audio_v1_0/06eb202a/hdl/i2c.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/user.org/zed_audio_v1_0/8de2dafc/hdl/ADAU1761_interface.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/user.org/zedboard_audio_v1_0/06eb202a/hdl/ADAU1761_interface.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/user.org/zed_audio_v1_0/8de2dafc/hdl/clocking.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/user.org/zedboard_audio_v1_0/06eb202a/hdl/clocking.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/user.org/zed_audio_v1_0/8de2dafc/hdl/adau1761_izedboard.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/user.org/zedboard_audio_v1_0/06eb202a/hdl/adau1761_izedboard.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../../../ipshared/user.org/zed_audio_v1_0/8de2dafc/hdl/audio_top.vhd</spirit:name>
+        <spirit:name>../../../../ipshared/user.org/zedboard_audio_v1_0/06eb202a/hdl/audio_top.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesiswrapper_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>synth/design_1_zed_audio_0_0.vhd</spirit:name>
+        <spirit:name>synth/design_1_zedboard_audio_0_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
-  <spirit:description>zed_audio_v1_0</spirit:description>
+  <spirit:description>zedboard_audio_v1_0</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">design_1_zed_audio_0_0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">design_1_zedboard_audio_0_0</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -371,16 +371,16 @@
       <xilinx:taxonomies>
         <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>zed_audio_v1_0</xilinx:displayName>
+      <xilinx:displayName>zedboard_audio_v1_0</xilinx:displayName>
       <xilinx:coreRevision>1</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>user.org:user:audio_testbench:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2016-05-20T09:37:09Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2016-05-25T08:27:58Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
-        <xilinx:tag xilinx:name="user.org:user:audio_testbench:1.0_ARCHIVE_LOCATION">/home/INTRA/raogbe/workspace/soc-audio-mixer/git/zedboard_audio</xilinx:tag>
-        <xilinx:tag xilinx:name="user.org:user:zed_audio:1.0_ARCHIVE_LOCATION">/home/INTRA/raogbe/workspace/soc-audio-mixer/git/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="user.org:user:audio_testbench:1.0_ARCHIVE_LOCATION">/home/INTRA/rauno.padari/workspace/soc-audio-mixer/ip_repo/zedboard_audio</xilinx:tag>
+        <xilinx:tag xilinx:name="user.org:user:zedboard_audio:1.0_ARCHIVE_LOCATION">/home/INTRA/rauno.padari/workspace/soc-audio-mixer/ip_repo/zedboard_audio</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

@@ -42,15 +42,9 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>AC_SCK</spirit:name>
+          <spirit:name>AC_ADR1</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>AC_SDA</spirit:name>
-          <spirit:wire>
-            <spirit:direction>inout</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
@@ -72,21 +66,27 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>AC_MCLK</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
           <spirit:name>AC_GPIO3</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>AC_ADR1</spirit:name>
+          <spirit:name>AC_MCLK</spirit:name>
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AC_SCK</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AC_SDA</spirit:name>
+          <spirit:wire>
+            <spirit:direction>inout</spirit:direction>
           </spirit:wire>
         </spirit:port>
       </spirit:ports>
@@ -107,13 +107,6 @@
           <spirit:configurableElementValue spirit:referenceId="PCW_USE_FABRIC_INTERRUPT">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="PCW_IRQ_F2P_INTR">1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="preset">ZedBoard</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>zed_audio_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="zed_audio" spirit:vendor="user.org" spirit:version="1.0"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_zed_audio_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
@@ -167,6 +160,13 @@
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_AXI_to_Audio_1_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>zedboard_audio_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="zedboard_audio" spirit:vendor="user.org" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_zedboard_audio_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections>
       <spirit:interconnection>
@@ -192,25 +192,19 @@
     </spirit:interconnections>
     <spirit:adHocConnections>
       <spirit:adHocConnection>
-        <spirit:name>xlconstant_0_dout</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="xlconstant_0" spirit:portRef="dout"/>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_0" spirit:portRef="hphone_l_valid"/>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_0" spirit:portRef="hphone_r_valid_dummy"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_CLK0</spirit:name>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="FCLK_CLK0"/>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_0" spirit:portRef="clk_100"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="M_AXI_GP0_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="rst_processing_system7_0_100M" spirit:portRef="slowest_sync_clk"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="Audio_to_AXI_0" spirit:portRef="s00_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="AXI_to_Audio_0" spirit:portRef="s00_axi_aclk"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M01_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="AXI_to_Audio_1" spirit:portRef="s00_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="S00_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M00_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M01_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M02_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="zedboard_audio_0" spirit:portRef="clk_100"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_FCLK_RESET0_N</spirit:name>
@@ -220,12 +214,12 @@
       <spirit:adHocConnection>
         <spirit:name>rst_processing_system7_0_100M_peripheral_aresetn</spirit:name>
         <spirit:internalPortReference spirit:componentRef="rst_processing_system7_0_100M" spirit:portRef="peripheral_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="Audio_to_AXI_0" spirit:portRef="s00_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="AXI_to_Audio_0" spirit:portRef="s00_axi_aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M01_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="AXI_to_Audio_1" spirit:portRef="s00_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="S00_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M00_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M01_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="M02_ARESETN"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -234,69 +228,9 @@
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="ARESETN"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>zed_audio_0_line_in_l</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_0" spirit:portRef="line_in_l"/>
-        <spirit:internalPortReference spirit:componentRef="Audio_to_AXI_0" spirit:portRef="LINE_IN_L"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>zed_audio_0_line_in_r</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_0" spirit:portRef="line_in_r"/>
-        <spirit:internalPortReference spirit:componentRef="Audio_to_AXI_0" spirit:portRef="LINE_IN_R"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>zed_audio_0_new_sample</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_0" spirit:portRef="new_sample"/>
-        <spirit:internalPortReference spirit:componentRef="Audio_to_AXI_0" spirit:portRef="NEW_SAMPLE_IN"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>Audio_to_AXI_0_NEW_SAMPLE_OUT</spirit:name>
         <spirit:internalPortReference spirit:componentRef="Audio_to_AXI_0" spirit:portRef="NEW_SAMPLE_OUT"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="IRQ_F2P"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>AC_GPIO1_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="AC_GPIO1"/>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_0" spirit:portRef="AC_GPIO1"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>zed_audio_0_AC_ADR0</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_0" spirit:portRef="AC_ADR0"/>
-        <spirit:externalPortReference spirit:portRef="AC_ADR0"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>zed_audio_0_AC_GPIO0</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_0" spirit:portRef="AC_GPIO0"/>
-        <spirit:externalPortReference spirit:portRef="AC_GPIO0"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>zed_audio_0_AC_SCK</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_0" spirit:portRef="AC_SCK"/>
-        <spirit:externalPortReference spirit:portRef="AC_SCK"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>zed_audio_0_AC_MCLK</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_0" spirit:portRef="AC_MCLK"/>
-        <spirit:externalPortReference spirit:portRef="AC_MCLK"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>AC_GPIO2_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="AC_GPIO2"/>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_0" spirit:portRef="AC_GPIO2"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>AC_GPIO3_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="AC_GPIO3"/>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_0" spirit:portRef="AC_GPIO3"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>zed_audio_0_AC_ADR1</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_0" spirit:portRef="AC_ADR1"/>
-        <spirit:externalPortReference spirit:portRef="AC_ADR1"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Net</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_0" spirit:portRef="AC_SDA"/>
-        <spirit:externalPortReference spirit:portRef="AC_SDA"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>AXI_to_Audio_1_HPHONE_L</spirit:name>
@@ -319,14 +253,80 @@
         <spirit:internalPortReference spirit:componentRef="audio_mixer_0" spirit:portRef="audio_channel_b_right_in"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
+        <spirit:name>zedboard_audio_0_AC_ADR0</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="zedboard_audio_0" spirit:portRef="AC_ADR0"/>
+        <spirit:externalPortReference spirit:portRef="AC_ADR0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>zedboard_audio_0_AC_ADR1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="zedboard_audio_0" spirit:portRef="AC_ADR1"/>
+        <spirit:externalPortReference spirit:portRef="AC_ADR1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>zedboard_audio_0_AC_GPIO0</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="zedboard_audio_0" spirit:portRef="AC_GPIO0"/>
+        <spirit:externalPortReference spirit:portRef="AC_GPIO0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>AC_GPIO1_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="AC_GPIO1"/>
+        <spirit:internalPortReference spirit:componentRef="zedboard_audio_0" spirit:portRef="AC_GPIO1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>AC_GPIO2_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="AC_GPIO2"/>
+        <spirit:internalPortReference spirit:componentRef="zedboard_audio_0" spirit:portRef="AC_GPIO2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>AC_GPIO3_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="AC_GPIO3"/>
+        <spirit:internalPortReference spirit:componentRef="zedboard_audio_0" spirit:portRef="AC_GPIO3"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>zedboard_audio_0_AC_MCLK</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="zedboard_audio_0" spirit:portRef="AC_MCLK"/>
+        <spirit:externalPortReference spirit:portRef="AC_MCLK"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>zedboard_audio_0_AC_SCK</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="zedboard_audio_0" spirit:portRef="AC_SCK"/>
+        <spirit:externalPortReference spirit:portRef="AC_SCK"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Net</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="zedboard_audio_0" spirit:portRef="AC_SDA"/>
+        <spirit:externalPortReference spirit:portRef="AC_SDA"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>xlconstant_0_dout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="xlconstant_0" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="zedboard_audio_0" spirit:portRef="hphone_l_valid"/>
+        <spirit:internalPortReference spirit:componentRef="zedboard_audio_0" spirit:portRef="hphone_r_valid_dummy"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>zedboard_audio_0_line_in_l</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="zedboard_audio_0" spirit:portRef="line_in_l"/>
+        <spirit:internalPortReference spirit:componentRef="Audio_to_AXI_0" spirit:portRef="LINE_IN_L"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>zedboard_audio_0_line_in_r</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="zedboard_audio_0" spirit:portRef="line_in_r"/>
+        <spirit:internalPortReference spirit:componentRef="Audio_to_AXI_0" spirit:portRef="LINE_IN_R"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>zedboard_audio_0_new_sample</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="zedboard_audio_0" spirit:portRef="new_sample"/>
+        <spirit:internalPortReference spirit:componentRef="Audio_to_AXI_0" spirit:portRef="NEW_SAMPLE_IN"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
         <spirit:name>audio_mixer_0_audio_mixed_a_b_left_out</spirit:name>
         <spirit:internalPortReference spirit:componentRef="audio_mixer_0" spirit:portRef="audio_mixed_a_b_left_out"/>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_0" spirit:portRef="hphone_l"/>
+        <spirit:internalPortReference spirit:componentRef="zedboard_audio_0" spirit:portRef="hphone_l"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>audio_mixer_0_audio_mixed_a_b_right_out</spirit:name>
         <spirit:internalPortReference spirit:componentRef="audio_mixer_0" spirit:portRef="audio_mixed_a_b_right_out"/>
-        <spirit:internalPortReference spirit:componentRef="zed_audio_0" spirit:portRef="hphone_r"/>
+        <spirit:internalPortReference spirit:componentRef="zedboard_audio_0" spirit:portRef="hphone_r"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

@@ -2,29 +2,30 @@
 # Vivado v2015.1 (64-bit)
 # SW Build 1215546 on Mon Apr 27 19:07:21 MDT 2015
 # IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
-# Start of session at: Fri May 20 12:31:26 2016
-# Process ID: 12371
-# Log file: /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/vivado.log
-# Journal file: /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/vivado.jou
+# Start of session at: Wed May 25 11:19:03 2016
+# Process ID: 16938
+# Log file: /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/vivado.log
+# Journal file: /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/vivado.jou
 #-----------------------------------------------------------
 start_gui
-create_project step1 /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step1 -part xc7z020clg484-1
-set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
-set_property target_language VHDL [current_project]
-create_bd_design "design_1"
-set_property  ip_repo_paths  /home/INTRA/raogbe/workspace/soc-audio-mixer/git/ip_repo_vivado/adau1761_audio_1.0 [current_project]
-update_ip_catalog
-ipx::infer_core -vendor user.org -library user -taxonomy /UserIP /home/INTRA/raogbe/workspace/soc-audio-mixer/git/zedboard_audio
-ipx::edit_ip_in_project -upgrade true -name audio_ip -directory /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step1/step1.tmp /home/INTRA/raogbe/workspace/soc-audio-mixer/git/zedboard_audio/component.xml
-ipx::current_core /home/INTRA/raogbe/workspace/soc-audio-mixer/git/zedboard_audio/component.xml
+open_project /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.xpr
+open_bd_design {/home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.srcs/sources_1/bd/design_1/design_1.bd}
+add_files -fileset constrs_1 -norecurse /home/INTRA/rauno.padari/workspace/soc-audio-mixer/ip_repo/zedboard_audio/constraints/zed_audio.xdc
+remove_files -fileset constrs_1 /home/INTRA/rauno.padari/workspace/soc-audio-mixer/git/zedboard_audio/constraints/zed_audio.xdc
+validate_bd_design -force
+delete_bd_objs [get_bd_nets zed_audio_0_line_in_l] [get_bd_nets zed_audio_0_line_in_r] [get_bd_nets zed_audio_0_new_sample] [get_bd_nets Net] [get_bd_nets zed_audio_0_AC_ADR0] [get_bd_nets zed_audio_0_AC_ADR1] [get_bd_nets zed_audio_0_AC_GPIO0] [get_bd_nets AC_GPIO1_1] [get_bd_nets AC_GPIO2_1] [get_bd_nets AC_GPIO3_1] [get_bd_nets zed_audio_0_AC_MCLK] [get_bd_nets zed_audio_0_AC_SCK] [get_bd_nets audio_mixer_0_audio_mixed_a_b_left_out] [get_bd_nets audio_mixer_0_audio_mixed_a_b_right_out] [get_bd_nets xlconstant_0_dout] [get_bd_cells zed_audio_0]
+ipx::infer_core -vendor user.org -library user -taxonomy /UserIP /home/INTRA/rauno.padari/workspace/soc-audio-mixer/ip_repo/zedboard_audio
+ipx::edit_ip_in_project -upgrade true -name zedboard_audio -directory /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.tmp /home/INTRA/rauno.padari/workspace/soc-audio-mixer/ip_repo/zedboard_audio/component.xml
+ipx::current_core /home/INTRA/rauno.padari/workspace/soc-audio-mixer/ip_repo/zedboard_audio/component.xml
 update_compile_order -fileset sim_1
-remove_files /home/INTRA/raogbe/workspace/soc-audio-mixer/git/zedboard_audio/hdl/audio_testbench.vhd
+remove_files /home/INTRA/rauno.padari/workspace/soc-audio-mixer/ip_repo/zedboard_audio/hdl/audio_testbench.vhd
 update_compile_order -fileset sim_1
 update_compile_order -fileset sources_1
-set_property name zed_audio [ipx::current_core]
-set_property display_name zed_audio_v1_0 [ipx::current_core]
-set_property description zed_audio_v1_0 [ipx::current_core]
+set_property name zedboard_audio [ipx::current_core]
+set_property display_name zedboard_audio_v1_0 [ipx::current_core]
+set_property description zedboard_audio_v1_0 [ipx::current_core]
 ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
 ipx::merge_project_changes hdl_parameters [ipx::current_core]
 set_property previous_version_for_upgrade user.org:user:audio_testbench:1.0 [ipx::current_core]
 set_property core_revision 1 [ipx::current_core]
@@ -32,160 +33,67 @@ ipx::create_xgui_files [ipx::current_core]
 ipx::update_checksums [ipx::current_core]
 ipx::save_core [ipx::current_core]
 close_project -delete
-set_property  ip_repo_paths  {/home/INTRA/raogbe/workspace/soc-audio-mixer/git/zedboard_audio /home/INTRA/raogbe/workspace/soc-audio-mixer/git/ip_repo_vivado/adau1761_audio_1.0} [current_project]
+set_property  ip_repo_paths  {/home/INTRA/rauno.padari/workspace/soc-audio-mixer/ip_repo/zedboard_audio /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/ip_repo/AXI_to_Audio_1.0 /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/ip_repo/Audio_to_AXI_1.0 /home/INTRA/rauno.padari/workspace/soc-audio-mixer/git/zedboard_audio /home/INTRA/rauno.padari/workspace/soc-audio-mixer/git/SoC_Design/IPs/Audio_Mixer /home/INTRA/rauno.padari/workspace/soc-audio-mixer/git/ip_repo_vivado/adau1761_audio_1.0} [current_project]
 update_ip_catalog
 startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+create_bd_cell -type ip -vlnv user.org:user:zedboard_audio:1.0 zedboard_audio_0
 endgroup
-apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:zed_audio:1.0 zed_audio_0
-endgroup
-set_property location {2 434 415} [get_bd_cells zed_audio_0]
-connect_bd_net [get_bd_pins zed_audio_0/clk_100] [get_bd_pins processing_system7_0/FCLK_CLK0]
-connect_bd_net -net [get_bd_nets processing_system7_0_FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+set_property location {4 1470 832} [get_bd_cells zedboard_audio_0]
+undo
+undo
+redo
+redo
+delete_bd_objs [get_bd_ports AC_ADR1] [get_bd_ports AC_MCLK] [get_bd_ports AC_ADR0] [get_bd_ports AC_GPIO2] [get_bd_ports AC_GPIO1] [get_bd_ports AC_GPIO0] [get_bd_ports AC_SDA] [get_bd_ports AC_SCK] [get_bd_ports AC_GPIO3]
+connect_bd_net -net [get_bd_nets processing_system7_0_FCLK_CLK0] [get_bd_pins zedboard_audio_0/clk_100] [get_bd_pins processing_system7_0/FCLK_CLK0]
 startgroup
 create_bd_port -dir O AC_ADR0
-connect_bd_net [get_bd_pins /zed_audio_0/AC_ADR0] [get_bd_ports AC_ADR0]
+connect_bd_net [get_bd_pins /zedboard_audio_0/AC_ADR0] [get_bd_ports AC_ADR0]
 endgroup
 startgroup
 create_bd_port -dir O AC_ADR1
-connect_bd_net [get_bd_pins /zed_audio_0/AC_ADR1] [get_bd_ports AC_ADR1]
+connect_bd_net [get_bd_pins /zedboard_audio_0/AC_ADR1] [get_bd_ports AC_ADR1]
 endgroup
 startgroup
 create_bd_port -dir O AC_GPIO0
-connect_bd_net [get_bd_pins /zed_audio_0/AC_GPIO0] [get_bd_ports AC_GPIO0]
+connect_bd_net [get_bd_pins /zedboard_audio_0/AC_GPIO0] [get_bd_ports AC_GPIO0]
 endgroup
 startgroup
 create_bd_port -dir I AC_GPIO1
-connect_bd_net [get_bd_pins /zed_audio_0/AC_GPIO1] [get_bd_ports AC_GPIO1]
+connect_bd_net [get_bd_pins /zedboard_audio_0/AC_GPIO1] [get_bd_ports AC_GPIO1]
 endgroup
 startgroup
 create_bd_port -dir I AC_GPIO2
-connect_bd_net [get_bd_pins /zed_audio_0/AC_GPIO2] [get_bd_ports AC_GPIO2]
+connect_bd_net [get_bd_pins /zedboard_audio_0/AC_GPIO2] [get_bd_ports AC_GPIO2]
 endgroup
 startgroup
 create_bd_port -dir I AC_GPIO3
-connect_bd_net [get_bd_pins /zed_audio_0/AC_GPIO3] [get_bd_ports AC_GPIO3]
+connect_bd_net [get_bd_pins /zedboard_audio_0/AC_GPIO3] [get_bd_ports AC_GPIO3]
 endgroup
 startgroup
 create_bd_port -dir O AC_MCLK
-connect_bd_net [get_bd_pins /zed_audio_0/AC_MCLK] [get_bd_ports AC_MCLK]
+connect_bd_net [get_bd_pins /zedboard_audio_0/AC_MCLK] [get_bd_ports AC_MCLK]
 endgroup
 startgroup
 create_bd_port -dir O AC_SCK
-connect_bd_net [get_bd_pins /zed_audio_0/AC_SCK] [get_bd_ports AC_SCK]
+connect_bd_net [get_bd_pins /zedboard_audio_0/AC_SCK] [get_bd_ports AC_SCK]
 endgroup
 startgroup
 create_bd_port -dir IO AC_SDA
-connect_bd_net [get_bd_pins /zed_audio_0/AC_SDA] [get_bd_ports AC_SDA]
+connect_bd_net [get_bd_pins /zedboard_audio_0/AC_SDA] [get_bd_ports AC_SDA]
 endgroup
-regenerate_bd_layout
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
-endgroup
-set_property location {1 177 183} [get_bd_cells xlconstant_0]
-connect_bd_net [get_bd_pins zed_audio_0/hphone_l_valid] [get_bd_pins xlconstant_0/dout]
-connect_bd_net -net [get_bd_nets processing_system7_0_FCLK_CLK0] [get_bd_pins zed_audio_0/hphone_r_valid_dummy] [get_bd_pins processing_system7_0/FCLK_CLK0]
-delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK0]
-undo
-undo
-connect_bd_net -net [get_bd_nets xlconstant_0_dout] [get_bd_pins zed_audio_0/hphone_r_valid_dummy] [get_bd_pins xlconstant_0/dout]
-create_peripheral user.org user Audio_to_AXI 1.0 -dir /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/ip_repo
-add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core user.org:user:Audio_to_AXI:1.0]
-generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core user.org:user:Audio_to_AXI:1.0]
-write_peripheral [ipx::find_open_core user.org:user:Audio_to_AXI:1.0]
-set_property  ip_repo_paths  {/home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/ip_repo/Audio_to_AXI_1.0 /home/INTRA/raogbe/workspace/soc-audio-mixer/git/zedboard_audio /home/INTRA/raogbe/workspace/soc-audio-mixer/git/ip_repo_vivado/adau1761_audio_1.0} [current_project]
-update_ip_catalog -rebuild
-ipx::edit_ip_in_project -upgrade true -name edit_Audio_to_AXI_v1_0 -directory /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/ip_repo /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/ip_repo/Audio_to_AXI_1.0/component.xml
-update_compile_order -fileset sim_1
-ipx::merge_project_changes hdl_parameters [ipx::current_core]
-ipx::create_xgui_files [ipx::current_core]
-ipx::update_checksums [ipx::current_core]
-ipx::save_core [ipx::current_core]
-close_project -delete
-update_ip_catalog -rebuild -repo_path /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/ip_repo/Audio_to_AXI_1.0
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:Audio_to_AXI:1.0 Audio_to_AXI_0
-endgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins Audio_to_AXI_0/S00_AXI]
-connect_bd_net [get_bd_pins zed_audio_0/line_in_l] [get_bd_pins Audio_to_AXI_0/LINE_IN_L]
-connect_bd_net [get_bd_pins zed_audio_0/line_in_r] [get_bd_pins Audio_to_AXI_0/LINE_IN_R]
-connect_bd_net [get_bd_pins zed_audio_0/new_sample] [get_bd_pins Audio_to_AXI_0/NEW_SAMPLE_IN]
-create_peripheral user.org user AXI_to_Audio 1.0 -dir /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/ip_repo
-add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core user.org:user:AXI_to_Audio:1.0]
-generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core user.org:user:AXI_to_Audio:1.0]
-write_peripheral [ipx::find_open_core user.org:user:AXI_to_Audio:1.0]
-set_property  ip_repo_paths  {/home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/ip_repo/AXI_to_Audio_1.0 /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/ip_repo/Audio_to_AXI_1.0 /home/INTRA/raogbe/workspace/soc-audio-mixer/git/zedboard_audio /home/INTRA/raogbe/workspace/soc-audio-mixer/git/ip_repo_vivado/adau1761_audio_1.0} [current_project]
-update_ip_catalog -rebuild
-ipx::edit_ip_in_project -upgrade true -name edit_AXI_to_Audio_v1_0 -directory /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/ip_repo /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/ip_repo/AXI_to_Audio_1.0/component.xml
-update_compile_order -fileset sim_1
-ipx::merge_project_changes hdl_parameters [ipx::current_core]
-ipx::create_xgui_files [ipx::current_core]
-ipx::update_checksums [ipx::current_core]
-ipx::save_core [ipx::current_core]
-close_project -delete
-update_ip_catalog -rebuild -repo_path /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/ip_repo/AXI_to_Audio_1.0
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:AXI_to_Audio:1.0 AXI_to_Audio_0
-endgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins AXI_to_Audio_0/S00_AXI]
-connect_bd_net [get_bd_pins AXI_to_Audio_0/HPHONE_L] [get_bd_pins zed_audio_0/hphone_l]
-connect_bd_net [get_bd_pins AXI_to_Audio_0/HPHONE_R] [get_bd_pins zed_audio_0/hphone_r]
-startgroup
-set_property -dict [list CONFIG.PCW_USE_FABRIC_INTERRUPT {1} CONFIG.PCW_IRQ_F2P_INTR {1}] [get_bd_cells processing_system7_0]
-endgroup
-connect_bd_net [get_bd_pins Audio_to_AXI_0/NEW_SAMPLE_OUT] [get_bd_pins processing_system7_0/IRQ_F2P]
-regenerate_bd_layout
+connect_bd_net [get_bd_pins zedboard_audio_0/hphone_l_valid] [get_bd_pins xlconstant_0/dout]
+connect_bd_net -net [get_bd_nets xlconstant_0_dout] [get_bd_pins zedboard_audio_0/hphone_r_valid_dummy] [get_bd_pins xlconstant_0/dout]
+connect_bd_net [get_bd_pins zedboard_audio_0/line_in_l] [get_bd_pins Audio_to_AXI_0/LINE_IN_L]
+connect_bd_net [get_bd_pins zedboard_audio_0/line_in_r] [get_bd_pins Audio_to_AXI_0/LINE_IN_R]
+connect_bd_net [get_bd_pins zedboard_audio_0/new_sample] [get_bd_pins Audio_to_AXI_0/NEW_SAMPLE_IN]
+connect_bd_net [get_bd_pins zedboard_audio_0/hphone_l] [get_bd_pins audio_mixer_0/audio_mixed_a_b_left_out]
+connect_bd_net [get_bd_pins zedboard_audio_0/hphone_r] [get_bd_pins audio_mixer_0/audio_mixed_a_b_right_out]
 validate_bd_design
-make_wrapper -files [get_files /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step1/step1.srcs/sources_1/bd/design_1/design_1.bd] -top
-add_files -norecurse /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step1/step1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-update_compile_order -fileset sources_1
-update_compile_order -fileset sim_1
-save_bd_design
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-delete_bd_objs [get_bd_nets Net] [get_bd_nets zed_audio_0_AC_ADR1] [get_bd_nets AC_GPIO3_1] [get_bd_nets AC_GPIO2_1] [get_bd_nets zed_audio_0_AC_MCLK] [get_bd_nets zed_audio_0_AC_SCK] [get_bd_nets zed_audio_0_AC_GPIO0] [get_bd_nets zed_audio_0_AC_ADR0] [get_bd_nets AC_GPIO1_1] [get_bd_ports AC_ADR1] [get_bd_ports AC_GPIO3] [get_bd_ports AC_MCLK] [get_bd_ports AC_GPIO2] [get_bd_ports AC_GPIO1] [get_bd_ports AC_GPIO0] [get_bd_ports AC_SDA] [get_bd_ports AC_SCK] [get_bd_ports AC_ADR0]
-undo
-add_files -fileset constrs_1 -norecurse /home/INTRA/raogbe/workspace/soc-audio-mixer/git/zedboard_audio/constraints/zed_audio.xdc
 save_bd_design
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream
 wait_on_run impl_1
-reset_run impl_1 -noclean_dir 
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-open_run impl_1
-file mkdir /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step1/step1.sdk
-file copy -force /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step1/step1.runs/impl_1/design_1_wrapper.sysdef /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step1/step1.sdk/design_1_wrapper.hdf
+file copy -force /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.runs/impl_1/design_1_wrapper.sysdef /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf
 
-launch_sdk -workspace /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step1/step1.sdk -hwspec /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step1/step1.sdk/design_1_wrapper.hdf
-open_bd_design {/home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step1/step1.srcs/sources_1/bd/design_1/design_1.bd}
-launch_sdk -workspace /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step1/step1.sdk -hwspec /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step1/step1.sdk/design_1_wrapper.hdf
-save_project_as step3 /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step3 -force
-set_property  ip_repo_paths  {/home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/ip_repo/AXI_to_Audio_1.0 /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/ip_repo/Audio_to_AXI_1.0 /home/INTRA/raogbe/workspace/soc-audio-mixer/git/zedboard_audio /home/INTRA/raogbe/workspace/soc-audio-mixer/git/SoC_Design/IPs/Audio_Mixer /home/INTRA/raogbe/workspace/soc-audio-mixer/git/ip_repo_vivado/adau1761_audio_1.0} [current_project]
-update_ip_catalog
-startgroup
-create_bd_cell -type ip -vlnv tsotnep:userLibrary:audio_mixer:1.0 audio_mixer_0
-endgroup
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:Audio_to_AXI:1.0 Audio_to_AXI_1
-endgroup
-delete_bd_objs [get_bd_cells Audio_to_AXI_1]
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:AXI_to_Audio:1.0 AXI_to_Audio_1
-endgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins AXI_to_Audio_1/S00_AXI]
-connect_bd_net [get_bd_pins AXI_to_Audio_1/HPHONE_L] [get_bd_pins audio_mixer_0/audio_channel_a_left_in]
-connect_bd_net [get_bd_pins AXI_to_Audio_1/HPHONE_R] [get_bd_pins audio_mixer_0/audio_channel_a_right_in]
-delete_bd_objs [get_bd_nets AXI_to_Audio_0_HPHONE_R]
-delete_bd_objs [get_bd_nets AXI_to_Audio_0_HPHONE_L]
-connect_bd_net [get_bd_pins AXI_to_Audio_0/HPHONE_L] [get_bd_pins audio_mixer_0/audio_channel_b_left_in]
-connect_bd_net [get_bd_pins AXI_to_Audio_0/HPHONE_R] [get_bd_pins audio_mixer_0/audio_channel_b_right_in]
-connect_bd_net [get_bd_pins audio_mixer_0/audio_mixed_a_b_left_out] [get_bd_pins zed_audio_0/hphone_l]
-connect_bd_net [get_bd_pins audio_mixer_0/audio_mixed_a_b_right_out] [get_bd_pins zed_audio_0/hphone_r]
-save_bd_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
+launch_sdk -workspace /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk -hwspec /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf
+launch_sdk -workspace /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk -hwspec /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf

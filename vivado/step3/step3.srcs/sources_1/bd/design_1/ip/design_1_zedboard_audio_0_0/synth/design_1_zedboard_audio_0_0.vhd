@@ -46,14 +46,14 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 
--- IP VLNV: user.org:user:zed_audio:1.0
+-- IP VLNV: user.org:user:zedboard_audio:1.0
 -- IP Revision: 1
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY design_1_zed_audio_0_0 IS
+ENTITY design_1_zedboard_audio_0_0 IS
   PORT (
     clk_100 : IN STD_LOGIC;
     AC_ADR0 : OUT STD_LOGIC;
@@ -74,11 +74,11 @@ ENTITY design_1_zed_audio_0_0 IS
     AC_SCK : OUT STD_LOGIC;
     AC_SDA : INOUT STD_LOGIC
   );
-END design_1_zed_audio_0_0;
+END design_1_zedboard_audio_0_0;
 
-ARCHITECTURE design_1_zed_audio_0_0_arch OF design_1_zed_audio_0_0 IS
+ARCHITECTURE design_1_zedboard_audio_0_0_arch OF design_1_zedboard_audio_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : string;
-  ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_1_zed_audio_0_0_arch: ARCHITECTURE IS "yes";
+  ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_1_zedboard_audio_0_0_arch: ARCHITECTURE IS "yes";
 
   COMPONENT audio_top IS
     PORT (
@@ -103,9 +103,9 @@ ARCHITECTURE design_1_zed_audio_0_0_arch OF design_1_zed_audio_0_0 IS
     );
   END COMPONENT audio_top;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF design_1_zed_audio_0_0_arch: ARCHITECTURE IS "audio_top,Vivado 2015.1";
+  ATTRIBUTE X_CORE_INFO OF design_1_zedboard_audio_0_0_arch: ARCHITECTURE IS "audio_top,Vivado 2015.1";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
-  ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_zed_audio_0_0_arch : ARCHITECTURE IS "design_1_zed_audio_0_0,audio_top,{}";
+  ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_zedboard_audio_0_0_arch : ARCHITECTURE IS "design_1_zedboard_audio_0_0,audio_top,{}";
 BEGIN
   U0 : audio_top
     PORT MAP (
@@ -128,4 +128,4 @@ BEGIN
       AC_SCK => AC_SCK,
       AC_SDA => AC_SDA
     );
-END design_1_zed_audio_0_0_arch;
+END design_1_zedboard_audio_0_0_arch;

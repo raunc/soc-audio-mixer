@@ -14,3 +14,13 @@
 14:58:00 INFO  : Invoking Bootgen: bootgen -image output.bif -o /home/INTRA/raogbe/workspace/soc-audio-mixer/sd-image/BOOT.bin -w on
 14:58:00 INFO  : Overwriting existing bif file /home/INTRA/raogbe/workspace/soc-audio-mixer/sd-temp/output.bif
 14:58:00 INFO  : Bootgen command execution is done.
+11:44:05 INFO  : Processing command line option -hwspec /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf.
+11:44:06 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+11:44:08 INFO  : XSDB server has started successfully.
+11:51:17 INFO  : Processing command line option -hwspec /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf.
+11:51:19 INFO  : Launching XSDB server: xsdb -n -s /cad/x_15/SDK/2015.1/scripts/xsdb/xsdb/xsdb-server.tcl 2457
+11:51:19 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_1.
+11:51:20 INFO  : XSDB server has started successfully.
+11:59:18 INFO  : Invoking Bootgen: bootgen -image output.bif -o /home/INTRA/rauno.padari/workspace/soc-audio-mixer/sd-temp/BOOT.bin -w on
+11:59:18 INFO  : Overwriting existing bif file /home/INTRA/rauno.padari/workspace/soc-audio-mixer/sd-temp/output.bif
+11:59:18 INFO  : Bootgen command execution is done.

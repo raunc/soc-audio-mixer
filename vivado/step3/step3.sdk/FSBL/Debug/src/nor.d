@@ -15,7 +15,7 @@ src/nor.o src/nor.d: ../src/nor.c ../src/fsbl.h \
  ../../FSBL_bsp/ps7_cortexa9_0/include/xil_io.h \
  ../../FSBL_bsp/ps7_cortexa9_0/include/xstatus.h \
  ../../FSBL_bsp/ps7_cortexa9_0/include/xil_assert.h ../src/fsbl_debug.h \
- /home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step1/step1.sdk/design_1_wrapper_hw_platform_0/ps7_init.h \
+ /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper_hw_platform_0/ps7_init.h \
  ../src/nor.h ../../FSBL_bsp/ps7_cortexa9_0/include/xstatus.h
 
 ../src/fsbl.h:
@@ -56,7 +56,7 @@ src/nor.o src/nor.d: ../src/nor.c ../src/fsbl.h \
 
 ../src/fsbl_debug.h:
 
-/home/INTRA/raogbe/workspace/soc-audio-mixer/vivado/step1/step1.sdk/design_1_wrapper_hw_platform_0/ps7_init.h:
+/home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper_hw_platform_0/ps7_init.h:
 
 ../src/nor.h:
 
