@@ -7,3 +7,6 @@
 [submodule "sd-temp/u-boot-Digilent-Dev"]
 	path = sd-temp/u-boot-Digilent-Dev
 	url = https://github.com/Digilent/u-boot-Digilent-Dev.git
+[submodule "git/ip_repo_vivado"]
+	path = git/ip_repo_vivado
+	url = https://github.com/tsotnep/ip_repo_vivado.git
