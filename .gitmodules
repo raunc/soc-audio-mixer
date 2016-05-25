@@ -1,3 +1,6 @@
 [submodule "ip_repo/zedboard_audio"]
 	path = ip_repo/zedboard_audio
 	url = https://github.com/raunc/zedboard_audio
+[submodule "git/SoC_Design"]
+	path = git/SoC_Design
+	url = https://github.com/karljans/SoC_Design
