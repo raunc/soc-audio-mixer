@@ -4,3 +4,6 @@
 [submodule "git/SoC_Design"]
 	path = git/SoC_Design
 	url = https://github.com/karljans/SoC_Design
+[submodule "sd-temp/u-boot-Digilent-Dev"]
+	path = sd-temp/u-boot-Digilent-Dev
+	url = https://github.com/Digilent/u-boot-Digilent-Dev.git
