@@ -10,3 +10,6 @@
 [submodule "git/ip_repo_vivado"]
 	path = git/ip_repo_vivado
 	url = https://github.com/tsotnep/ip_repo_vivado.git
+[submodule "ip_repo/Volume_Pregain"]
+	path = ip_repo/Volume_Pregain
+	url = https://github.com/tsotnep/Volume_Pregain.git
