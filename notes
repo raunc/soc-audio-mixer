@@ -1,0 +1,2 @@
+AXI_to_Audio_0 (A in c code, udp) -> Volume_0 -> Filter_0 -> mixer channel b
+AXI_to_Audio_1 (B in c code, line_in) -> Volume_1 -> Filter_1 -> mixer channel a
