@@ -843,3 +843,8 @@ selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, 
 dismissDialog("Launch SDK"); // J:ag (cl:JFrame)
 // Tcl Message: launch_sdk -workspace /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk -hwspec /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf 
 // Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk -hwspec /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,169 MB. GUI used memory: 66 MB. Current time: 5/25/16 12:06:09 PM EEST
+// HMemoryUtils.trashcanNow. Engine heap size: 5,169 MB. GUI used memory: 64 MB. Current time: 5/25/16 12:36:10 PM EEST
+// Elapsed time: 3190 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 1); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, cl:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 5,169 MB. GUI used memory: 63 MB. Current time: 5/25/16 1:06:10 PM EEST
