@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         printf("::::END_USAGE::::\n");
     }
     else {
-        printf("Starting audio_copy_driver");
+        printf("Starting audio_copy_driver\n");
   
         //take inputs from user
         unsigned volume = atoi(argv[2]);
@@ -36,13 +36,16 @@ int main(int argc, char *argv[])
         unsigned address1 = 0x43c60000;
 
         unsigned channel = atoi(argv[1]);// 0 - line_in, 1 - udp
-        unsigned address = channel == 0 ? address0 : address1;
+        unsigned address = (channel == 0) ? address0 : address1;
 
-        printf("Opening /dev/mem");
+        printf("Channel %d\n", channel);
+        printf("Address %d\n", address);
+
+        printf("Opening /dev/mem\n");
         int fd = open("/dev/mem", O_RDWR);
         if (fd < 1) { perror("mem"); return -1; }
 
-        printf("/dev/mem opened");
+        printf("/dev/mem opened\n");
 
  
   

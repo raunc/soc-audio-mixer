@@ -1,6 +1,6 @@
 src/ps7_init.o src/ps7_init.d: \
- /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper_hw_platform_0/ps7_init.c \
- /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper_hw_platform_0/ps7_init.h \
+ /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper_hw_platform_2/ps7_init.c \
+ /home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper_hw_platform_2/ps7_init.h \
  ../../FSBL_bsp/ps7_cortexa9_0/include/xil_io.h \
  ../../FSBL_bsp/ps7_cortexa9_0/include/xil_types.h \
  ../../FSBL_bsp/ps7_cortexa9_0/include/xpseudo_asm.h \
@@ -10,7 +10,7 @@ src/ps7_init.o src/ps7_init.d: \
  ../../FSBL_bsp/ps7_cortexa9_0/include/xparameters.h \
  ../../FSBL_bsp/ps7_cortexa9_0/include/xparameters_ps.h
 
-/home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper_hw_platform_0/ps7_init.h:
+/home/INTRA/rauno.padari/workspace/soc-audio-mixer/vivado/step3/step3.sdk/design_1_wrapper_hw_platform_2/ps7_init.h:
 
 ../../FSBL_bsp/ps7_cortexa9_0/include/xil_io.h:
 

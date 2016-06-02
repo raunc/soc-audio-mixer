@@ -21,12 +21,18 @@
 /******************************************************************/
 
 /* Definitions for driver AXI_TO_AUDIO */
-#define XPAR_AXI_TO_AUDIO_NUM_INSTANCES 1
+#define XPAR_AXI_TO_AUDIO_NUM_INSTANCES 2
 
 /* Definitions for peripheral AXI_TO_AUDIO_0 */
 #define XPAR_AXI_TO_AUDIO_0_DEVICE_ID 0
 #define XPAR_AXI_TO_AUDIO_0_S00_AXI_BASEADDR 0x43C10000
 #define XPAR_AXI_TO_AUDIO_0_S00_AXI_HIGHADDR 0x43C1FFFF
+
+
+/* Definitions for peripheral AXI_TO_AUDIO_1 */
+#define XPAR_AXI_TO_AUDIO_1_DEVICE_ID 1
+#define XPAR_AXI_TO_AUDIO_1_S00_AXI_BASEADDR 0x43C20000
+#define XPAR_AXI_TO_AUDIO_1_S00_AXI_HIGHADDR 0x43C2FFFF
 
 
 /******************************************************************/
@@ -38,6 +44,40 @@
 #define XPAR_AUDIO_TO_AXI_0_DEVICE_ID 0
 #define XPAR_AUDIO_TO_AXI_0_S00_AXI_BASEADDR 0x43C00000
 #define XPAR_AUDIO_TO_AXI_0_S00_AXI_HIGHADDR 0x43C0FFFF
+
+
+/******************************************************************/
+
+/* Definitions for driver FILTER_IIR */
+#define XPAR_FILTER_IIR_NUM_INSTANCES 2
+
+/* Definitions for peripheral FILTER_IIR_0 */
+#define XPAR_FILTER_IIR_0_DEVICE_ID 0
+#define XPAR_FILTER_IIR_0_S00_AXI_BASEADDR 0x43C30000
+#define XPAR_FILTER_IIR_0_S00_AXI_HIGHADDR 0x43C3FFFF
+
+
+/* Definitions for peripheral FILTER_IIR_1 */
+#define XPAR_FILTER_IIR_1_DEVICE_ID 1
+#define XPAR_FILTER_IIR_1_S00_AXI_BASEADDR 0x43C40000
+#define XPAR_FILTER_IIR_1_S00_AXI_HIGHADDR 0x43C4FFFF
+
+
+/******************************************************************/
+
+/* Definitions for driver VOLUME_PREGAIN */
+#define XPAR_VOLUME_PREGAIN_NUM_INSTANCES 2
+
+/* Definitions for peripheral VOLUME_PREGAIN_0 */
+#define XPAR_VOLUME_PREGAIN_0_DEVICE_ID 0
+#define XPAR_VOLUME_PREGAIN_0_S00_AXI_BASEADDR 0x43C50000
+#define XPAR_VOLUME_PREGAIN_0_S00_AXI_HIGHADDR 0x43C5FFFF
+
+
+/* Definitions for peripheral VOLUME_PREGAIN_1 */
+#define XPAR_VOLUME_PREGAIN_1_DEVICE_ID 1
+#define XPAR_VOLUME_PREGAIN_1_S00_AXI_BASEADDR 0x43C60000
+#define XPAR_VOLUME_PREGAIN_1_S00_AXI_HIGHADDR 0x43C6FFFF
 
 
 /******************************************************************/

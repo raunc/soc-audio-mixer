@@ -1,7 +1,7 @@
 --Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2015.1 (lin64) Build 1215546 Mon Apr 27 19:07:21 MDT 2015
---Date        : Wed May 25 14:21:46 2016
+--Date        : Thu Jun  2 11:57:14 2016
 --Host        : fx7.pld.ttu.ee running 64-bit openSUSE Leap 42.1 (x86_64)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
